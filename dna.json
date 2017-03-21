@@ -1,9 +1,9 @@
 {
     "Version": 0,
-    "Id": "9eced046-0169-11e7-a9f8-0090f5e8c3f9",
-    "Name": "wat",
+    "Id": "",
+    "Name": "",
     "Properties": {
-        "description": "distributed micro-blogging",
+        "description": "",
         "language": "en"
     },
     "PropertiesSchema": "schema_properties.json",
@@ -12,10 +12,10 @@
         "H": null
     },
     "Zomes": {
-        "clutter": {
-            "Name": "clutter",
-            "Description": "zome that implements micro-blogging",
-            "Code": "zome_clutter.js",
+        "JSZOME": {
+            "Name": "JSZOME",
+            "Description": "JSZOME that implements JSZOME",
+            "Code": "zome_JSZOME.js",
             "CodeHash": {
                 "H": null
             },
@@ -28,22 +28,6 @@
                         "H": null
                     }
                 },
-                "follow": {
-                    "Name": "follow",
-                    "DataFormat": "json",
-                    "Schema": "schema_follow.json",
-                    "SchemaHash": {
-                        "H": null
-                    }
-                },
-                "profile": {
-                    "Name": "profile",
-                    "DataFormat": "json",
-                    "Schema": "schema_profile.json",
-                    "SchemaHash": {
-                        "H": null
-                    }
-                }
             },
             "NucleusType": "js"
         }
