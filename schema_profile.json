@@ -1,18 +1,16 @@
 {
-	"title": "Profile Schema",
-	"type": "object",
-	"properties": {
-		"firstName": {
-			"type": "string"
-		},
-		"lastName": {
-			"type": "string"
-		},
-		"age": {
-			"description": "Age in years",
-			"type": "integer",
-			"minimum": 0
-		}
+    "title": "Profile Schema",
+    "type": "object",
+    "properties": {
+	"firstName": {
+	    "type": "string"
 	},
-	"required": ["firstName", "lastName"]
+	"lastName": {
+	    "type": "string"
+	},
+	"nick": {
+	    "type": "string"
+	}
+    },
+    "required": ["nick"]
 }
