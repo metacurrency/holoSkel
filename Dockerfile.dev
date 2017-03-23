@@ -1,0 +1,7 @@
+FROM holochain.core.dev
+
+ADD . /home/user/workingChain
+WORKDIR /home/user/workingChain
+
+expose 3141
+

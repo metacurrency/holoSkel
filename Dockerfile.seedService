@@ -1,0 +1,5 @@
+FROM holochain.core.dev
+
+ADD . /clutter
+WORKDIR /clutter
+
