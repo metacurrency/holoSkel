@@ -1,0 +1,7 @@
+hc init dev.chain
+hc clone . test
+hc gen chain test
+hc serve test &
+sleep 3
+cd
+{ wget -q localhost:3141 && echo "serve sample passed"; } || { echo "serve sample failed" && exit 1; }
