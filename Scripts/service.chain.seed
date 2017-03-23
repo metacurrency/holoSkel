@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "hc init $HOSTNAME"
+hc init $HOSTNAME
+echo
+
+echo "hc clone /clutter clutter"
+hc clone /clutter clutter
+echo 
+
+echo "hc test clutter"
+hc test clutter
+echo
+
+echo "hc seed clutter"
+hc seed clutter
+echo

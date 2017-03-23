@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  service.chain:
+    build:
+      context: .
+      dockerfile: Dockerfile.seedService
+    volumes:
+      - seed:/home/user/.holochain
+      - ./Scripts:/Scripts
+    command: /Scripts/service.chain.seed
+  hc:
+    build:
+      context: .
+      dockerfile: Dockerfile.serveInstance
+    ports:
+      - "3141"
+    volumes:
+      - seed:/home/user/seedService
+      - ./Scripts:/Scripts
+    command: /Scripts/chain.joinAndServe
+    depends_on: [service.chain]
+
+volumes:
+  seed: 
