@@ -3,5 +3,7 @@ FROM holochain.core.dev
 ADD . /home/user/workingChain
 WORKDIR /home/user/workingChain
 
+#RUN chown user:user /home/user -R
+
 expose 3141
 
