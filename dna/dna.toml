@@ -1,8 +1,9 @@
 Version = 0
-Id = "e2a9ec7f-0294-11e7-adeb-0090f5e8c3f9"
-Name = "holoSkel"
-PropertiesSchema = "schema_properties.json"
+Id = "00000000-0000-0000-0000-000000000000"
+Name = "sample"
+PropertiesSchema = "properties_schema.json"
 HashType = "sha2-256"
+RequiresVersion = 3
 
 [Properties]
   description = "a bogus test holochain"
@@ -14,7 +15,7 @@ HashType = "sha2-256"
   [Zomes.jsZome]
     Name = "jsZome"
     Description = "this is a javascript test zome"
-    Code = "zome_jsZome.js"
+    Code = "jsZome.js"
     NucleusType = "js"
     [Zomes.jsZome.CodeHash]
     [Zomes.jsZome.Entries]
@@ -25,13 +26,13 @@ HashType = "sha2-256"
         [Zomes.jsZome.Entries.myOdds.SchemaHash]
       [Zomes.jsZome.Entries.profile]
         Name = "profile"
-        DataFormat = "JSON"
-        Schema = "schema_profile.json"
+        DataFormat = "json"
+        Schema = "profile.json"
         [Zomes.jsZome.Entries.profile.SchemaHash]
   [Zomes.myZome]
     Name = "myZome"
     Description = "this is a zygomas test zome"
-    Code = "zome_myZome.zy"
+    Code = "myZome.zy"
     NucleusType = "zygo"
     [Zomes.myZome.CodeHash]
     [Zomes.myZome.Entries]
@@ -42,11 +43,11 @@ HashType = "sha2-256"
         [Zomes.myZome.Entries.myData.SchemaHash]
       [Zomes.myZome.Entries.primes]
         Name = "primes"
-        DataFormat = "JSON"
+        DataFormat = "json"
         Schema = ""
         [Zomes.myZome.Entries.primes.SchemaHash]
       [Zomes.myZome.Entries.profile]
         Name = "profile"
-        DataFormat = "JSON"
-        Schema = "schema_profile.json"
+        DataFormat = "json"
+        Schema = "profile.json"
         [Zomes.myZome.Entries.profile.SchemaHash]
