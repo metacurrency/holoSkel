@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile.seedService
     volumes:
-      - seed:/home/user/.holochain
+      - seed:/chain.seeded
       - ./Scripts:/Scripts
     command: /Scripts/service.chain.seed
   hc:
@@ -16,9 +16,10 @@ services:
     ports:
       - "3141"
     volumes:
-      - seed:/home/user/seedService
+      - seed:/chain.seeded
       - ./Scripts:/Scripts
     command: /Scripts/chain.joinAndServe
+    #command: /bin/sh
     depends_on: [service.chain]
 
 volumes:

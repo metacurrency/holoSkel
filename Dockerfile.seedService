@@ -1,5 +1,12 @@
-FROM holochain.core.dev
+FROM metacurrency/holochain
 
-ADD . /clutter
-WORKDIR /clutter
+ADD . /chain.source
+WORKDIR /chain.source
+RUN chown root:holochain /chain.source -R
+RUN mkdir /chain.seeded
+RUN chmod 777 /chain.seeded
 
+#ENTRYPOINT blank doesnt seem to overload the parent entrypoint
+#ENTRYPOINT
+
+#ENTRYPOINT echo "overloading entrypoint to log in as root"
