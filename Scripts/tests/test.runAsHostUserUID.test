@@ -1,4 +1,4 @@
-docker run  -e LOCAL_USER_ID=`id -u $USER` -i dev.chain > test.runAsHostUserUID.test.output
+docker run  -e LOCAL_USER_ID=`id -u $USER` -i $1 > test.runAsHostUserUID.test.output
 grep -q "Starting with UID : `id -u $USER`" test.runAsHostUserUID.test.output || exit 1
 grep -q "Usage: su-exec user-spec command \[args\]" test.runAsHostUserUID.test.output || exit 1
 rm test.runAsHostUserUID.test.output
