@@ -1,13 +1,15 @@
-#!/bin/bash
+#!/bin/sh
+
+ls /chain.seeded -la
 
 echo "hc init $HOSTNAME"
 hc init $HOSTNAME
 echo
 
-echo "hc join /.holochain/clutter clutter"
-hc join /home/user/seedService/clutter clutter
+echo "hc join /.holochain/devchain"
+hc join /chain.seeded/devchain devchain
 echo
-echo "hc serve clutter"
-hc serve clutter
+echo "hc serve devchain"
+hc serve devchain
 echo
 
