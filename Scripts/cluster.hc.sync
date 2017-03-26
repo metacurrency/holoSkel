@@ -1,0 +1,16 @@
+#!/bin/sh
+echo "/bin/sh cluster.hc.sync"
+
+#ls /chain.seeded -la
+
+#echo "hc init $HOSTNAME"
+#hc init $HOSTNAME
+#echo
+
+#echo "hc join /.holochain/devchain"
+#hc join /chain.seeded/devchain devchain
+#echo
+#echo "hc serve devchain"
+#hc serve devchain
+#echo
+
