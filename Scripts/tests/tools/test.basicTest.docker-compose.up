@@ -1,0 +1,25 @@
+dockerImageName=$1
+testName=$2
+successMessage=$3
+failMessage=$4
+scale=$5
+grepStringList=$6
+
+
+#take down network
+docker-compose down
+#rebuild all images
+docker-compose build --no-cache
+#set scale
+docker-compose scale hc=$scale
+#bring network up
+docker-compose up $dockerBaseRun | tee $2.output
+
+#run tests and analyse output
+grep -q "$grepStringList" ./$testName.output || {echo "failed: $failMessage" && exit 1; }
+
+#remove extraneous files (log?)
+rm ./$testName.output
+
+#terminate test
+echo "passed. $successMessage"
