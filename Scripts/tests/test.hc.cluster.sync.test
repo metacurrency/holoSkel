@@ -10,10 +10,8 @@ docker-compose down
 #rebuild all images
 docker-compose build --no-cache
 #set scale
-echo "docker-compose scale hc=$scale"
 docker-compose scale hc=$scale
 #bring network up
-echo "docker-compose up $dockerBaseRun | tee $2.output"
 docker-compose up $dockerBaseRun | tee $2.output
 
 #run tests and analyse output
