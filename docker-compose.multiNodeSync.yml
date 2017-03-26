@@ -15,6 +15,8 @@ services:
       dockerfile: Dockerfile.serveInstance
     ports:
       - "3141"
+    environment:
+      - LOCAL_USER_ID
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
@@ -26,7 +28,7 @@ services:
       context: .
       dockerfile: Dockerfile.hc.post.up
     volumes:
-      - seed:/chain.seed
+      - seed:/chain.seeded
       - ./Scripts:/Scripts
     command: /Scripts/hc.post.up
     depends_on: [hc]
