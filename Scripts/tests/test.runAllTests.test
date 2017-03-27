@@ -1,0 +1,8 @@
+docker build -f Dockerfile.chain.testing -t chain.testing .
+cd Scripts/tests
+echo "--- Test 1 - serve start as user"
+./test.runAsHostUserUID.test chain.testing && echo "--- passed" || echo "--- failed"
+echo
+echo "--- Test 2 - serve examples/sample with hc"
+./test.hc.serve.sample.test chain.testing && echo "--- passed" || echo "--- failed"
+echo
