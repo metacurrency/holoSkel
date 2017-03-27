@@ -22,4 +22,6 @@ skeleton template for building a holochain app
       3.someFileName.indicatingRole3
       ...
       
+    * Should you need it, the shared filesystem is writable (/chain.seeded/devchain)
+      
 2. when ready, run `Scripts/tests/test.HC`
