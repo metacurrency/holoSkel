@@ -1,0 +1,11 @@
+dockerImageName=$1
+testName=$2
+successMessage=$3
+failMessage=$4
+grepStringList=$5
+
+
+docker run  -e LOCAL_USER_ID=`id -u $USER` -it $1 /bin/sh -c $2 | tee $2.output
+grep -q "$5" ./$2.output || {echo "failed: $4" && exit 1; }
+rm ./$2.output
+echo "passed. $3"

@@ -5,30 +5,36 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.seedService
+    environment:
+      - LOCAL_USER_ID
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
-    command: /Scripts/service.chain.seed
+    command: /Scripts/cluster/pre.up
   hc:
     build:
       context: .
       dockerfile: Dockerfile.serveInstance
     ports:
       - "3141"
+    environment:
+      - LOCAL_USER_ID
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
-    command: /Scripts/chain.joinAndServe
+    command: /Scripts/cluster/hc.sync
     #command: /bin/sh
     depends_on: [service.chain]
   hc.post.up:
     build:
       context: .
       dockerfile: Dockerfile.hc.post.up
+    environment:
+      - LOCAL_USER_ID
     volumes:
-      - seed:/chain.seed
+      - seed:/chain.seeded
       - ./Scripts:/Scripts
-    command: /Scripts/hc.post.up
+    command: /Scripts/cluster/post.up
     depends_on: [hc]
 
 volumes:

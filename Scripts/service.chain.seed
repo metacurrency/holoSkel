@@ -1,4 +1,7 @@
 #!/bin/sh
+echo "$HOSTNAME" > /chain.seeded/.seedID
+
+
 echo "hc init $HOSTNAME"
 hc init $HOSTNAME
 echo
