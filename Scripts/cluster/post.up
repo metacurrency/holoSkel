@@ -1,5 +1,8 @@
 #!/bin/sh
 echo #!/bin/sh ./Scripts/cluster/hc.sync
 
-echo "ls /chain.seeded/instances/hc"
-ls /chain.seeded/instances/hc
+seedID=`cat /chain.seeded/.seedID`
+clusterDir="/chain.seeded/cluster/$seedID"
+
+echo "ls $clusterDir/hc"
+ls $clusterDir/hc

@@ -1,8 +1,11 @@
 #!/bin/sh
 echo #!/bin/sh $0
 
-echo "Seed host name: `cat /chain.seeded/.seedID`"
+seedID=`cat /chain.seeded/.seedID`
+clusterDir="/chain.seeded/cluster/$seedID"
+
+echo "Seed host name: $seedID"
 echo "My host name: $HOSTNAME"
 
-mkdir -p /chain.seeded/instances/hc
-touch /chain.seeded/instances/hc/$HOSTNAME
+mkdir -p $clusterDir/hc
+touch $clusterDir/hc/$HOSTNAME
