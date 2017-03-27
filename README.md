@@ -13,4 +13,4 @@ skeleton template for building a holochain app
   hc join /chain.seeded/devchain myHCInstance
   hc serve myHCInstance
   ```
-2. run Scripts/tests/test.HC
+2. run `Scripts/tests/test.HC`
