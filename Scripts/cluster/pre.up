@@ -1,10 +1,8 @@
 #!/bin/sh
 echo #!/bin/sh $0
 
-clusterDir="/chain.seeded/cluster/$seedID"
-mkdir -p $clusterDir
-touch $clusterDir/.cluster.lock
-
+rm -rf /home/user/.holochain/devchain
+rm -rf /chain.seeded/devchain
 
 echo "hc init $HOSTNAME"
 hc init $HOSTNAME
@@ -21,6 +19,25 @@ echo
 echo "hc seed devchain"
 hc seed devchain
 echo
+
+
+
+
+echo "$HOSTNAME" > /home/user/.holochain/devchain/.seedID
+seedID=`cat /home/user/.holochain/devchain/.seedID`
+echo "seedID: $seedID"
+
+clusterDir="/home/user/.holochain/devchain/cluster/$seedID"
+mkdir /home/user/.holochain/devchain/cluster
+mkdir /home/user/.holochain/devchain/cluster/$seedID
+
+touch $clusterDir/.cluster.lock
+
+ls -la $clusterDir
+
+
+
+
 
 ls /home/user/.holochain
 cp /home/user/.holochain/devchain /chain.seeded -r

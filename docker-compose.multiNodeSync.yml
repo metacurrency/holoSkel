@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.seedService
+    environment:
+      - LOCAL_USER_ID
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts

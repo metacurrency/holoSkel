@@ -1,8 +1,10 @@
 #!/bin/sh
-echo #!/bin/sh ./Scripts/cluster/hc.sync
-
-seedID=`cat /chain.seeded/.seedID`
-clusterDir="/chain.seeded/cluster/$seedID"
+echo #!/bin/sh $0
+seedID=`cat /chain.seeded/devchain/.seedID`
+clusterDir="/chain.seeded/devchain/cluster/$seedID"
 
 echo "ls $clusterDir/hc"
 ls $clusterDir/hc
+
+echo "unlocking cluster $seedID"
+rm $clusterDir/.cluster.lock
