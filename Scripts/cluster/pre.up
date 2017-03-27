@@ -1,5 +1,9 @@
 #!/bin/sh
-echo "$HOSTNAME" > /chain.seeded/.seedID
+echo #!/bin/sh $0
+
+clusterDir="/chain.seeded/cluster/$seedID"
+mkdir -p $clusterDir
+touch $clusterDir/.cluster.lock
 
 
 echo "hc init $HOSTNAME"
