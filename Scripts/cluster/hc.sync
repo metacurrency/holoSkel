@@ -13,3 +13,5 @@ touch $clusterDir/hc/$HOSTNAME
 /Scripts/cluster/sync $clusterDir
 
 echo "$HOSTNAME > sync completed"
+
+$clusterDir/hc/$HOSTNAME

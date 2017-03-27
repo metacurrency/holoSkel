@@ -6,5 +6,17 @@ clusterDir="/chain.seeded/devchain/cluster/$seedID"
 echo "ls $clusterDir/hc"
 ls $clusterDir/hc
 
+
+
+counter=1
+for container in `ls $clusterDir/hc`; do
+	cp "/Scripts/cluster/hc/$container.role.normal" $clusterDir/hc/$HOSTNAME
+	counter+=1
+done
+
+
+
 echo "unlocking cluster $seedID"
 rm $clusterDir/.cluster.lock
+
+
