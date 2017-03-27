@@ -1,12 +1,41 @@
-Attaching to devchain_service.chain_1, devchain_hc_5, devchain_hc_4, devchain_hc_3, devchain_hc_2, devchain_hc_1, devchain_hc.post.up_1
+Attaching to devchain_service.chain_1, devchain_hc_4, devchain_hc_5, devchain_hc_3, devchain_hc_2, devchain_hc_1, devchain_hc.post.up_1
 [36mservice.chain_1  |[0m Starting with UID : 1002
+[33mhc_4             |[0m Starting with UID : 1002
+[32mhc_5             |[0m Starting with UID : 1002
 [36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m hc init 75120d8afab6
+[32mhc_5             |[0m 
+[36mservice.chain_1  |[0m hc init a78990bf9385
 [36mservice.chain_1  |[0m Holochain service initialized
+[33mhc_4             |[0m 
+[32mhc_5             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/a78990bf9385/hc': File exists
 [36mservice.chain_1  |[0m 
+[32mhc_5             |[0m Seed host name: a78990bf9385
+[35mhc_3             |[0m Starting with UID : 1002
 [36mservice.chain_1  |[0m hc clone /chain.source devchain
 [36mservice.chain_1  |[0m 
+[32mhc_5             |[0m My host name: ca79af3a08dd
+[35mhc_3             |[0m 
+[33mhc_4             |[0m Seed host name: a78990bf9385
+[33mhc_4             |[0m My host name: f01d84b59138
+[33mhc_4             |[0m 
+[32mhc_5             |[0m 
 [36mservice.chain_1  |[0m hc test devchain
+[35mhc_3             |[0m Seed host name: a78990bf9385
+[31mhc_2             |[0m Starting with UID : 1002
+[35mhc_3             |[0m My host name: ea15853ec951
+[36mservice.chain_1  |[0m ========================================
+[33mhc_4             |[0m f01d84b59138 > sync completed
+[35mhc_3             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/a78990bf9385/hc': File exists
+[36mservice.chain_1  |[0m Test: 'test_4' starting...
+[35mhc_3             |[0m 
+[33mhc_4             |[0m /Scripts/cluster/hc.sync: line 17: /chain.seeded/devchain/cluster/a78990bf9385/hc/f01d84b59138: Permission denied
+[36mservice.chain_1  |[0m ========================================
+[35mhc_3             |[0m ea15853ec951 > sync completed
+[36mservice.chain_1  |[0m Test 'test_4' line 0: {myZome addPrime map[prime:%!s(float64=4)]  Error calling 'commit': Invalid entry: {"Atype":"hash", "prime":4, "zKeyOrder":["prime"]} }
+[31mhc_2             |[0m 
+[31mhc_2             |[0m Seed host name: a78990bf9385
+[31mhc_2             |[0m My host name: 4b76466c2b53
+[35mhc_3             |[0m /Scripts/cluster/hc.sync: line 17: /chain.seeded/devchain/cluster/a78990bf9385/hc/ea15853ec951: Permission denied
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test: 'test_5' starting...
 [36mservice.chain_1  |[0m ========================================
@@ -29,6 +58,15 @@ Attaching to devchain_service.chain_1, devchain_hc_5, devchain_hc_4, devchain_hc
 [36mservice.chain_1  |[0m Test 'test_0' line 0: {myZome addData 2 %h%  }
 [36mservice.chain_1  |[0m passed! ✔
 [36mservice.chain_1  |[0m ========================================
+[34mhc_1             |[0m Starting with UID : 1002
+[34mhc_1             |[0m 
+[31mhc_2             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/a78990bf9385/hc': File exists
+[34mhc_1             |[0m Seed host name: a78990bf9385
+[34mhc_1             |[0m My host name: 30b5bf0bc989
+[31mhc_2             |[0m 
+[34mhc_1             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/a78990bf9385/hc': File exists
+[34mhc_1             |[0m 
+[34mhc_1             |[0m 30b5bf0bc989 > sync completed
 [36mservice.chain_1  |[0m Test: 'test_1' starting...
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test 'test_1' line 0: {myZome addData 4 %h%  }
@@ -42,102 +80,55 @@ Attaching to devchain_service.chain_1, devchain_hc_5, devchain_hc_4, devchain_hc
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test 'test_3' line 0: {myZome addPrime map[prime:%!s(float64=7)] "%h%"  }
 [36mservice.chain_1  |[0m passed! ✔
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test: 'test_4' starting...
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test 'test_4' line 0: {myZome addPrime map[prime:%!s(float64=4)]  Error calling 'commit': Invalid entry: {"Atype":"hash", "prime":4, "zKeyOrder":["prime"]} }
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m ==================================================================
 [36mservice.chain_1  |[0m 		+++++ All tests passed :D +++++
 [36mservice.chain_1  |[0m ==================================================================
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m hc seed devchain
-[36mservice.chain_1  |[0m holochain id:QmeZpdqFvGcgwWtYznSQ2sg2zbBiwmCxkobXkGtMvBhz96
+[36mservice.chain_1  |[0m holochain id:QmVESEL8RrqtHonHzNRyYhytDTJ6xr5dXnzMXmnP5MV8qn
+[34mhc_1             |[0m hello world
 [36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m seedID: 75120d8afab6
+[36mservice.chain_1  |[0m seedID: a78990bf9385
 [36mservice.chain_1  |[0m total 8
-[36mservice.chain_1  |[0m drwxr-sr-x    2 user     holochai      4096 Mar 27 04:25 .
-[36mservice.chain_1  |[0m drwxr-sr-x    3 user     holochai      4096 Mar 27 04:25 ..
-[36mservice.chain_1  |[0m -rw-r--r--    1 user     holochai         0 Mar 27 04:25 .cluster.lock
+[36mservice.chain_1  |[0m drwxr-sr-x    2 user     holochai      4096 Mar 27 04:34 .
+[36mservice.chain_1  |[0m drwxr-sr-x    3 user     holochai      4096 Mar 27 04:34 ..
+[36mservice.chain_1  |[0m -rw-r--r--    1 user     holochai         0 Mar 27 04:34 .cluster.lock
 [36mservice.chain_1  |[0m agent.txt
 [36mservice.chain_1  |[0m devchain
 [36mservice.chain_1  |[0m priv.key
 [36mservice.chain_1  |[0m system.conf
 [36mservice.chain_1  |[0m devchain
-[33mhc_5             |[0m Starting with UID : 1002
-[33mhc_5             |[0m 
-[33mhc_5             |[0m Seed host name: 75120d8afab6
-[33mhc_5             |[0m My host name: 752ea6809158
-[33mhc_5             |[0m 
-[36mdevchain_service.chain_1 exited with code 0
-[0m[32mhc_4             |[0m Starting with UID : 1002
-[32mhc_4             |[0m 
-[32mhc_4             |[0m Seed host name: 75120d8afab6
-[32mhc_4             |[0m My host name: 22290744c35a
-[32mhc_4             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/75120d8afab6/hc': File exists
-[32mhc_4             |[0m 
-[35mhc_3             |[0m Starting with UID : 1002
-[35mhc_3             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/75120d8afab6/hc': File exists
-[35mhc_3             |[0m 
-[35mhc_3             |[0m Seed host name: 75120d8afab6
-[35mhc_3             |[0m My host name: ff4410fb0980
-[35mhc_3             |[0m 
-[34mhc_1             |[0m Starting with UID : 1002
-[31mhc_2             |[0m Starting with UID : 1002
-[34mhc_1             |[0m 
-[31mhc_2             |[0m 
-[34mhc_1             |[0m Seed host name: 75120d8afab6
-[34mhc_1             |[0m My host name: fcadcd5c0d44
-[31mhc_2             |[0m Seed host name: 75120d8afab6
-[31mhc_2             |[0m My host name: a2e8e26b5376
-[34mhc_1             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/75120d8afab6/hc': File exists
-[31mhc_2             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/75120d8afab6/hc': File exists
-[34mhc_1             |[0m 
-[31mhc_2             |[0m 
 [36;1mhc.post.up_1     |[0m Starting with UID : 1002
 [36;1mhc.post.up_1     |[0m 
-[36;1mhc.post.up_1     |[0m ls /chain.seeded/devchain/cluster/75120d8afab6/hc
-[36;1mhc.post.up_1     |[0m 22290744c35a
-[36;1mhc.post.up_1     |[0m 752ea6809158
-[36;1mhc.post.up_1     |[0m a2e8e26b5376
-[36;1mhc.post.up_1     |[0m fcadcd5c0d44
-[36;1mhc.post.up_1     |[0m ff4410fb0980
-[36;1mhc.post.up_1     |[0m cp: can't stat '/Scripts/cluster/hc/3.role.normal': No such file or directory
-[36;1mhc.post.up_1     |[0m cp: can't stat '/Scripts/cluster/hc/4.role.normal': No such file or directory
-[36;1mhc.post.up_1     |[0m cp: can't stat '/Scripts/cluster/hc/5.role.normal': No such file or directory
-[36;1mhc.post.up_1     |[0m unlocking cluster 75120d8afab6
-[35mhc_3             |[0m ff4410fb0980 > sync completed
-[35mhc_3             |[0m /Scripts/cluster/hc.sync: line 17: /chain.seeded/devchain/cluster/75120d8afab6/hc/ff4410fb0980: Permission denied
-[31mhc_2             |[0m a2e8e26b5376 > sync completed
-[31mhc_2             |[0m /Scripts/cluster/hc.sync: line 17: /chain.seeded/devchain/cluster/75120d8afab6/hc/a2e8e26b5376: Permission denied
-[34mhc_1             |[0m fcadcd5c0d44 > sync completed
-[34mhc_1             |[0m /Scripts/cluster/hc.sync: line 17: /chain.seeded/devchain/cluster/75120d8afab6/hc/fcadcd5c0d44: Permission denied
-[33mhc_5             |[0m 752ea6809158 > sync completed
-[33mhc_5             |[0m total 12
-[33mhc_5             |[0m drwxrwxrwx    3 root     holochai      4096 Mar 27 04:25 .
-[33mhc_5             |[0m drwxr-xr-x   63 root     root          4096 Mar 27 04:25 ..
-[33mhc_5             |[0m drwxr-sr-x    7 user     user          4096 Mar 27 04:25 devchain
-[33mhc_5             |[0m hc init 752ea6809158
-[32mhc_4             |[0m 22290744c35a > sync completed
-[32mhc_4             |[0m total 12
-[32mhc_4             |[0m drwxrwxrwx    3 root     holochai      4096 Mar 27 04:25 .
-[32mhc_4             |[0m drwxr-xr-x   63 root     root          4096 Mar 27 04:25 ..
-[32mhc_4             |[0m drwxr-sr-x    7 user     user          4096 Mar 27 04:25 devchain
-[32mhc_4             |[0m hc init 22290744c35a
-[33mhc_5             |[0m Holochain service initialized
-[33mhc_5             |[0m 
-[33mhc_5             |[0m hc join /.holochain/devchain
-[32mhc_4             |[0m Holochain service initialized
-[32mhc_4             |[0m 
-[32mhc_4             |[0m hc join /.holochain/devchain
-[32mhc_4             |[0m 
-[32mhc_4             |[0m hc serve devchain
-[33mhc_5             |[0m 
-[33mhc_5             |[0m hc serve devchain
-[33mhc_5             |[0m starting server on localhost:3141
-[32mhc_4             |[0m starting server on localhost:3141
+[36;1mhc.post.up_1     |[0m ls /chain.seeded/devchain/cluster/a78990bf9385/hc
+[36;1mhc.post.up_1     |[0m 30b5bf0bc989
+[36;1mhc.post.up_1     |[0m 4b76466c2b53
+[36;1mhc.post.up_1     |[0m ca79af3a08dd
+[36;1mhc.post.up_1     |[0m ea15853ec951
+[36;1mhc.post.up_1     |[0m f01d84b59138
+[36;1mhc.post.up_1     |[0m cp: can't stat '/Scripts/cluster/hc/3.*': No such file or directory
+[36;1mhc.post.up_1     |[0m cp: can't stat '/Scripts/cluster/hc/4.*': No such file or directory
+[36;1mhc.post.up_1     |[0m cp: can't stat '/Scripts/cluster/hc/5.*': No such file or directory
+[36;1mhc.post.up_1     |[0m unlocking cluster a78990bf9385
+[36mdevchain_service.chain_1 exited with code 0
+[0m[32mhc_5             |[0m ca79af3a08dd > sync completed
+[32mhc_5             |[0m /Scripts/cluster/hc.sync: line 17: /chain.seeded/devchain/cluster/a78990bf9385/hc/ca79af3a08dd: Permission denied
+[31mhc_2             |[0m 4b76466c2b53 > sync completed
+[31mhc_2             |[0m total 12
+[31mhc_2             |[0m drwxrwxrwx    3 root     holochai      4096 Mar 27 04:34 .
+[31mhc_2             |[0m drwxr-xr-x   63 root     root          4096 Mar 27 04:34 ..
+[31mhc_2             |[0m drwxr-sr-x    7 user     user          4096 Mar 27 04:34 devchain
+[31mhc_2             |[0m hc init 4b76466c2b53
+[31mhc_2             |[0m Holochain service initialized
+[31mhc_2             |[0m 
+[31mhc_2             |[0m hc join /.holochain/devchain
+[31mhc_2             |[0m 
+[31mhc_2             |[0m hc serve devchain
+[31mhc_2             |[0m starting server on localhost:3141
 [36;1mdevchain_hc.post.up_1 exited with code 0
+[0m[33mdevchain_hc_4 exited with code 126
 [0m[35mdevchain_hc_3 exited with code 126
-[0m[34mdevchain_hc_1 exited with code 126
-[0m[31mdevchain_hc_2 exited with code 126
+[0m[34mdevchain_hc_1 exited with code 0
+[0m[32mdevchain_hc_5 exited with code 126
 [0m
