@@ -1,5 +1,8 @@
 #!/bin/sh
-echo #!/bin/sh ./Scripts/cluster/hc.sync
+echo #!/bin/sh $0
 
 echo "Seed host name: `cat /chain.seeded/.seedID`"
 echo "My host name: $HOSTNAME"
+
+mkdir -p /chain.seeded/instances/hc
+touch /chain.seeded/instances/hc/$HOSTNAME

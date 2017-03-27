@@ -1,0 +1,5 @@
+#!/bin/sh
+echo #!/bin/sh ./Scripts/cluster/hc.sync
+
+echo "ls /chain.seeded/instances/hc"
+ls /chain.seeded/instances/hc
