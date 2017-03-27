@@ -12,12 +12,14 @@ docker-compose build --no-cache
 #set scale
 echo "docker-compose scale hc=$scale"
 docker-compose scale "hc=$scale"
+export HC_SCALE=5
+echo "exported HC_SCALE=$HC_SCALE. Check the source maintains where necessary"
 #bring network up
-echo "docker-compose -f ../../docker-compose.multiNodeSync.yml up | tee $2.output"
-docker-compose -f ../../docker-compose.multiNodeSync.yml up | tee $2.output
+echo "docker-compose -f ../../docker-compose.multiNodeSync.yml up | tee ./$testName.output"
+docker-compose -f ../../docker-compose.multiNodeSync.yml up | tee ./$testName.output
 
 #run tests and analyse output
-grep -q "$grepStringList" ./$testName.output || {echo "failed: $failMessage" && exit 1; }
+grep -q "hv.post.up.Scripts.run" ./$testName.output || { echo "failed: $failMessage" && exit 1; }
 
 #remove extraneous files (log?)
 rm ./$testName.output

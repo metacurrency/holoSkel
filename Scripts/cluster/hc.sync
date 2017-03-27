@@ -1,0 +1,4 @@
+#!/bin/sh
+echo #!/bin/sh ./Scripts/cluster/hc.sync
+
+echo $HOSTNAME

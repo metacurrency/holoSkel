@@ -20,17 +20,19 @@ services:
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
-    command: /Scripts/cluster.hc.synchronise
+    command: /Scripts/cluster/hc.sync
     #command: /bin/sh
     depends_on: [service.chain]
   hc.post.up:
     build:
       context: .
       dockerfile: Dockerfile.hc.post.up
+    environment:
+      - LOCAL_USER_ID
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
-    command: /Scripts/hc.post.up
+    command: /Scripts/cluster/post.up
     depends_on: [hc]
 
 volumes:

@@ -1,6 +1,6 @@
-Attaching to devchain_service.chain_1, devchain_hc_5, devchain_hc_4, devchain_hc_2, devchain_hc_3, devchain_hc_1, devchain_hc.post.up_1
+Attaching to devchain_service.chain_1, devchain_hc_4, devchain_hc_5, devchain_hc_3, devchain_hc_1, devchain_hc_2, devchain_hc.post.up_1
 [36mservice.chain_1  |[0m Starting with UID : 9001
-[36mservice.chain_1  |[0m hc init 2ff07bd22742
+[36mservice.chain_1  |[0m hc init 64534615f27a
 [36mservice.chain_1  |[0m Holochain service initialized
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m hc clone /chain.source devchain
@@ -27,7 +27,7 @@ Attaching to devchain_service.chain_1, devchain_hc_5, devchain_hc_4, devchain_hc
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test: 'test_5' starting...
 [36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test 'test_5' line 0: {jsZome addProfile map[lastName:Brock firstName:Art] "%h%"  }
+[36mservice.chain_1  |[0m Test 'test_5' line 0: {jsZome addProfile map[firstName:Art lastName:Brock] "%h%"  }
 [36mservice.chain_1  |[0m passed! ✔
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test: 'test_6' starting...
@@ -51,30 +51,35 @@ Attaching to devchain_service.chain_1, devchain_hc_5, devchain_hc_4, devchain_hc
 [36mservice.chain_1  |[0m ==================================================================
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m hc seed devchain
-[36mservice.chain_1  |[0m holochain id:QmXw59KGvrwBKXGp4qEgkQeTkTEFVhDybQnDBhtd18mRNA
-[33mhc_5             |[0m Starting with UID : 1002
-[33mhc_5             |[0m su-exec: /Scripts/cluster.hc.synchronise: No such file or directory
-[32mhc_4             |[0m Starting with UID : 1002
-[32mhc_4             |[0m su-exec: /Scripts/cluster.hc.synchronise: No such file or directory
+[36mservice.chain_1  |[0m holochain id:Qmdx9etkWpCG3wvREGBDRVcAp8yrYzYtoVGkjiCRuHrcJn
 [36mservice.chain_1  |[0m 
-[33mdevchain_hc_5 exited with code 1
-[0m[36mservice.chain_1  |[0m agent.txt
-[35mhc_2             |[0m Starting with UID : 1002
-[35mhc_2             |[0m su-exec: /Scripts/cluster.hc.synchronise: No such file or directory
+[36mservice.chain_1  |[0m agent.txt
 [36mservice.chain_1  |[0m devchain
 [36mservice.chain_1  |[0m priv.key
-[32mdevchain_hc_4 exited with code 1
-[0m[36mservice.chain_1  |[0m system.conf
-[31mhc_3             |[0m Starting with UID : 1002
-[31mhc_3             |[0m su-exec: /Scripts/cluster.hc.synchronise: No such file or directory
-[35mdevchain_hc_2 exited with code 1
-[0m[36mservice.chain_1  |[0m devchain
-[34mhc_1             |[0m Starting with UID : 1002
-[34mhc_1             |[0m su-exec: /Scripts/cluster.hc.synchronise: No such file or directory
-[31mdevchain_hc_3 exited with code 1
+[36mservice.chain_1  |[0m system.conf
+[36mservice.chain_1  |[0m devchain
+[36mdevchain_service.chain_1 exited with code 0
+[0m[33mhc_4             |[0m Starting with UID : 1002
+[33mhc_4             |[0m 
+[33mhc_4             |[0m cc0698e9855e
+[32mhc_5             |[0m Starting with UID : 1002
+[32mhc_5             |[0m 
+[32mhc_5             |[0m 01abf216ca3f
+[35mhc_3             |[0m Starting with UID : 1002
+[35mhc_3             |[0m 
+[33mdevchain_hc_4 exited with code 0
+[0m[31mhc_1             |[0m Starting with UID : 1002
+[31mhc_1             |[0m 
+[31mhc_1             |[0m 20e036a57d8e
+[35mhc_3             |[0m 59698dc743e6
+[32mdevchain_hc_5 exited with code 0
+[0m[34mhc_2             |[0m Starting with UID : 1002
+[34mhc_2             |[0m 
+[34mhc_2             |[0m a1a9b38b9873
+[31mdevchain_hc_1 exited with code 0
 [0m[36;1mhc.post.up_1     |[0m Starting with UID : 1002
-[36;1mhc.post.up_1     |[0m hc.post.up.Scripts.run
-[34mdevchain_hc_1 exited with code 1
-[0m[36mdevchain_service.chain_1 exited with code 0
-[0m[36;1mdevchain_hc.post.up_1 exited with code 0
+[36;1mhc.post.up_1     |[0m su-exec: /Scripts/cluster/post.up: No such file or directory
+[34mdevchain_hc_2 exited with code 0
+[0m[35mdevchain_hc_3 exited with code 0
+[0m[36;1mdevchain_hc.post.up_1 exited with code 1
 [0m
