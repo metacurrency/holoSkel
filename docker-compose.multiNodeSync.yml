@@ -8,7 +8,7 @@ services:
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
-    command: /Scripts/service.chain.seed
+    command: /Scripts/cluster/pre.up
   hc:
     build:
       context: .
