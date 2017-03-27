@@ -10,8 +10,8 @@ ls $clusterDir/hc
 
 counter=1
 for container in `ls $clusterDir/hc`; do
-	cp "/Scripts/cluster/hc/$container.role.normal" $clusterDir/hc/$HOSTNAME
-	counter+=1
+	cp "/Scripts/cluster/hc/$counter.role.normal" $clusterDir/hc/$container
+	counter=$(( counter+1 ))
 done
 
 
