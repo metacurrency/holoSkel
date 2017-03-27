@@ -1,4 +1,5 @@
 #!/bin/sh
 echo #!/bin/sh ./Scripts/cluster/hc.sync
 
-echo $HOSTNAME
+echo "Seed host name: `cat /chain.seeded/.seedID`"
+echo "My host name: $HOSTNAME"

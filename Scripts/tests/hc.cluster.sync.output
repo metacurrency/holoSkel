@@ -1,11 +1,22 @@
-Attaching to devchain_service.chain_1, devchain_hc_4, devchain_hc_5, devchain_hc_3, devchain_hc_1, devchain_hc_2, devchain_hc.post.up_1
+Attaching to devchain_service.chain_1, devchain_hc_3, devchain_hc_4, devchain_hc_5, devchain_hc_2, devchain_hc_1, devchain_hc.post.up_1
 [36mservice.chain_1  |[0m Starting with UID : 9001
-[36mservice.chain_1  |[0m hc init 64534615f27a
+[36mservice.chain_1  |[0m hc init ccc6ebcc279b
 [36mservice.chain_1  |[0m Holochain service initialized
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m hc clone /chain.source devchain
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m hc test devchain
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'grouped' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'grouped' line 0: {jsZome addOdd 7 %h%  }
+[36mservice.chain_1  |[0m passed! ✔
+[36mservice.chain_1  |[0m Test 'grouped' line 1: {jsZome addOdd 2  Invalid entry: 2 }
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'test_0' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'test_0' line 0: {myZome addData 2 %h%  }
+[36mservice.chain_1  |[0m passed! ✔
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test: 'test_1' starting...
 [36mservice.chain_1  |[0m ========================================
@@ -34,52 +45,46 @@ Attaching to devchain_service.chain_1, devchain_hc_4, devchain_hc_5, devchain_hc
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test 'test_6' line 0: {myZome getDNA  %dna%  }
 [36mservice.chain_1  |[0m passed! ✔
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test: 'grouped' starting...
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test 'grouped' line 0: {jsZome addOdd 7 %h%  }
-[36mservice.chain_1  |[0m passed! ✔
-[36mservice.chain_1  |[0m Test 'grouped' line 1: {jsZome addOdd 2  Invalid entry: 2 }
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test: 'test_0' starting...
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test 'test_0' line 0: {myZome addData 2 %h%  }
-[36mservice.chain_1  |[0m passed! ✔
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m ==================================================================
 [36mservice.chain_1  |[0m 		+++++ All tests passed :D +++++
 [36mservice.chain_1  |[0m ==================================================================
+[33mhc_3             |[0m Starting with UID : 1002
+[33mhc_3             |[0m 
+[33mhc_3             |[0m Seed host name: ccc6ebcc279b
+[33mhc_3             |[0m My host name: 3ad864083227
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m hc seed devchain
-[36mservice.chain_1  |[0m holochain id:Qmdx9etkWpCG3wvREGBDRVcAp8yrYzYtoVGkjiCRuHrcJn
+[36mservice.chain_1  |[0m holochain id:QmdTSN9c8LAzQ7ydpxaouXzMcM8ajBqACdftFbLqy6xTkY
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m agent.txt
 [36mservice.chain_1  |[0m devchain
 [36mservice.chain_1  |[0m priv.key
 [36mservice.chain_1  |[0m system.conf
 [36mservice.chain_1  |[0m devchain
-[36mdevchain_service.chain_1 exited with code 0
-[0m[33mhc_4             |[0m Starting with UID : 1002
-[33mhc_4             |[0m 
-[33mhc_4             |[0m cc0698e9855e
-[32mhc_5             |[0m Starting with UID : 1002
-[32mhc_5             |[0m 
-[32mhc_5             |[0m 01abf216ca3f
-[35mhc_3             |[0m Starting with UID : 1002
-[35mhc_3             |[0m 
-[33mdevchain_hc_4 exited with code 0
-[0m[31mhc_1             |[0m Starting with UID : 1002
-[31mhc_1             |[0m 
-[31mhc_1             |[0m 20e036a57d8e
-[35mhc_3             |[0m 59698dc743e6
-[32mdevchain_hc_5 exited with code 0
-[0m[34mhc_2             |[0m Starting with UID : 1002
-[34mhc_2             |[0m 
-[34mhc_2             |[0m a1a9b38b9873
-[31mdevchain_hc_1 exited with code 0
+[33mdevchain_hc_3 exited with code 0
+[0m[36mdevchain_service.chain_1 exited with code 0
+[0m[32mhc_4             |[0m Starting with UID : 1002
+[32mhc_4             |[0m 
+[32mhc_4             |[0m Seed host name: ccc6ebcc279b
+[32mhc_4             |[0m My host name: c0bf293d29a8
+[35mhc_5             |[0m Starting with UID : 1002
+[35mhc_5             |[0m 
+[35mhc_5             |[0m Seed host name: ccc6ebcc279b
+[35mhc_5             |[0m My host name: 5a916f8c60e0
+[32mdevchain_hc_4 exited with code 0
+[0m[31mhc_2             |[0m Starting with UID : 1002
+[31mhc_2             |[0m 
+[31mhc_2             |[0m Seed host name: ccc6ebcc279b
+[31mhc_2             |[0m My host name: 69b09b2afb5c
+[35mdevchain_hc_5 exited with code 0
+[0m[34mhc_1             |[0m Starting with UID : 1002
+[34mhc_1             |[0m 
+[34mhc_1             |[0m Seed host name: ccc6ebcc279b
+[34mhc_1             |[0m My host name: 073e7b07784d
+[31mdevchain_hc_2 exited with code 0
 [0m[36;1mhc.post.up_1     |[0m Starting with UID : 1002
 [36;1mhc.post.up_1     |[0m su-exec: /Scripts/cluster/post.up: No such file or directory
-[34mdevchain_hc_2 exited with code 0
-[0m[35mdevchain_hc_3 exited with code 0
+[34mdevchain_hc_1 exited with code 0
 [0m[36;1mdevchain_hc.post.up_1 exited with code 1
 [0m
