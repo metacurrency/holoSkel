@@ -1,0 +1,136 @@
+Attaching to devchain_service.chain_1, devchain_hc_4, devchain_hc_3, devchain_hc_2, devchain_hc_1, devchain_hc.post.up_1
+[36mservice.chain_1  |[0m Starting with UID : 1002
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m hc init febe2fe6a20d
+[36mservice.chain_1  |[0m Holochain service initialized
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m hc clone /chain.source devchain
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m hc test devchain
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'test_4' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'test_4' line 0: {myZome addPrime map[prime:%!s(float64=4)]  Error calling 'commit': Invalid entry: {"Atype":"hash", "prime":4, "zKeyOrder":["prime"]} }
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'test_5' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'test_5' line 0: {jsZome addProfile map[lastName:Brock firstName:Art] "%h%"  }
+[36mservice.chain_1  |[0m passed! ✔
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'test_6' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'test_6' line 0: {myZome getDNA  %dna%  }
+[36mservice.chain_1  |[0m passed! ✔
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'grouped' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'grouped' line 0: {jsZome addOdd 7 %h%  }
+[36mservice.chain_1  |[0m passed! ✔
+[36mservice.chain_1  |[0m Test 'grouped' line 1: {jsZome addOdd 2  Invalid entry: 2 }
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'test_0' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'test_0' line 0: {myZome addData 2 %h%  }
+[36mservice.chain_1  |[0m passed! ✔
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'test_1' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'test_1' line 0: {myZome addData 4 %h%  }
+[36mservice.chain_1  |[0m passed! ✔
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'test_2' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'test_2' line 0: {myZome addData 5  Error calling 'commit': Invalid entry: 5 }
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'test_3' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'test_3' line 0: {myZome addPrime map[prime:%!s(float64=7)] "%h%"  }
+[36mservice.chain_1  |[0m passed! ✔
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m ==================================================================
+[36mservice.chain_1  |[0m 		+++++ All tests passed :D +++++
+[36mservice.chain_1  |[0m ==================================================================
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m hc seed devchain
+[36mservice.chain_1  |[0m holochain id:QmVw5aQ43WZzi7XHAd5a41XYZfdvMaSPzxcYXHifj62nT1
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m seedID: febe2fe6a20d
+[36mservice.chain_1  |[0m total 8
+[36mservice.chain_1  |[0m drwxr-sr-x    2 user     holochai      4096 Apr  3 14:41 .
+[36mservice.chain_1  |[0m drwxr-sr-x    3 user     holochai      4096 Apr  3 14:41 ..
+[36mservice.chain_1  |[0m -rw-r--r--    1 user     holochai         0 Apr  3 14:41 .cluster.lock
+[36mservice.chain_1  |[0m agent.txt
+[36mservice.chain_1  |[0m devchain
+[36mservice.chain_1  |[0m priv.key
+[36mservice.chain_1  |[0m system.conf
+[36mservice.chain_1  |[0m devchain
+[33mhc_4             |[0m Starting with UID : 1002
+[33mhc_4             |[0m 
+[33mhc_4             |[0m Seed host name: febe2fe6a20d
+[33mhc_4             |[0m My host name: 1cd92d289c5b
+[33mhc_4             |[0m 
+[36mdevchain_service.chain_1 exited with code 0
+[0m[35mhc_2             |[0m Starting with UID : 1002
+[35mhc_2             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/febe2fe6a20d/hc': File exists
+[35mhc_2             |[0m 
+[35mhc_2             |[0m Seed host name: febe2fe6a20d
+[35mhc_2             |[0m My host name: 906852aeb967
+[35mhc_2             |[0m 
+[32mhc_3             |[0m Starting with UID : 1002
+[31mhc_1             |[0m Starting with UID : 1002
+[31mhc_1             |[0m 
+[31mhc_1             |[0m Seed host name: febe2fe6a20d
+[31mhc_1             |[0m My host name: 44e79577889a
+[32mhc_3             |[0m 
+[31mhc_1             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/febe2fe6a20d/hc': File exists
+[31mhc_1             |[0m 
+[32mhc_3             |[0m Seed host name: febe2fe6a20d
+[34mhc.post.up_1     |[0m Starting with UID : 1002
+[34mhc.post.up_1     |[0m 
+[34mhc.post.up_1     |[0m ls /chain.seeded/devchain/cluster/febe2fe6a20d/hc
+[34mhc.post.up_1     |[0m 1cd92d289c5b
+[34mhc.post.up_1     |[0m 44e79577889a
+[34mhc.post.up_1     |[0m 906852aeb967
+[34mhc.post.up_1     |[0m fb3e067565de
+[34mhc.post.up_1     |[0m cp: can't stat '/Scripts/cluster/hc/3.*': No such file or directory
+[34mhc.post.up_1     |[0m cp: can't stat '/Scripts/cluster/hc/4.*': No such file or directory
+[32mhc_3             |[0m My host name: fb3e067565de
+[32mhc_3             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/febe2fe6a20d/hc': File exists
+[32mhc_3             |[0m 
+[34mhc.post.up_1     |[0m unlocking cluster febe2fe6a20d
+[31mhc_1             |[0m 44e79577889a > sync completed
+[31mhc_1             |[0m total 12
+[33mhc_4             |[0m 1cd92d289c5b > sync completed
+[33mhc_4             |[0m total 12
+[33mhc_4             |[0m drwxrwxrwx    3 root     holochai      4096 Apr  3 14:41 .
+[33mhc_4             |[0m drwxr-xr-x   63 root     root          4096 Apr  3 14:41 ..
+[33mhc_4             |[0m drwxr-sr-x    7 user     user          4096 Apr  3 14:41 devchain
+[33mhc_4             |[0m hc init 1cd92d289c5b
+[31mhc_1             |[0m drwxrwxrwx    3 root     holochai      4096 Apr  3 14:41 .
+[31mhc_1             |[0m drwxr-xr-x   63 root     root          4096 Apr  3 14:41 ..
+[31mhc_1             |[0m drwxr-sr-x    7 user     user          4096 Apr  3 14:41 devchain
+[31mhc_1             |[0m hc init 44e79577889a
+[32mhc_3             |[0m fb3e067565de > sync completed
+[35mhc_2             |[0m /Scripts/cluster/hc.sync: line 17: /chain.seeded/devchain/cluster/febe2fe6a20d/hc/906852aeb967: Permission denied
+[35mhc_2             |[0m 906852aeb967 > sync completed
+[32mhc_3             |[0m /Scripts/cluster/hc.sync: line 17: /chain.seeded/devchain/cluster/febe2fe6a20d/hc/fb3e067565de: Permission denied
+[31mhc_1             |[0m Holochain service initialized
+[31mhc_1             |[0m 
+[31mhc_1             |[0m hc join /.holochain/devchain
+[33mhc_4             |[0m Holochain service initialized
+[33mhc_4             |[0m 
+[33mhc_4             |[0m hc join /.holochain/devchain
+[31mhc_1             |[0m 
+[31mhc_1             |[0m hc test scenario.1 role.2
+[31mhc_1             |[0m Error: No DNA file in /home/user/.holochain/scenario.1/dna/
+[31mhc_1             |[0m 
+[34mdevchain_hc.post.up_1 exited with code 0
+[0m[33mhc_4             |[0m 
+[33mhc_4             |[0m hc test scenario.1 role.1
+[33mhc_4             |[0m Error: No DNA file in /home/user/.holochain/scenario.1/dna/
+[33mhc_4             |[0m 
+[35mdevchain_hc_2 exited with code 126
+[0m[32mdevchain_hc_3 exited with code 126
+[0m[31mdevchain_hc_1 exited with code 0
+[0m[33mdevchain_hc_4 exited with code 0
+[0m
