@@ -1,0 +1,8 @@
+export dockerBaseRun= -e LOCAL_USER_ID=1002 
+export LOCAL_USER_ID=1002
+
+docker build -f Dockerfile.chain.testing -t chain.testing .
+
+cd Scripts/tests
+
+
