@@ -25,3 +25,6 @@ skeleton template for building a holochain app
     * Should you need it, the shared filesystem is writable (/chain.seeded/devchain)
       
 2. when ready, run `Scripts/tests/test.HC`
+3. to test an entire hc scenario, use the testScenario script. This script will spin up a container for each role specified in the scenario and run `hc test devchain $scenario $role` for each
+   
+   `Scripts/testScenario <scenarioName>`
