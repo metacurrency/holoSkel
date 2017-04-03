@@ -1,0 +1,46 @@
+testScenarioName=$1
+
+testScenarioDirectory="../../test/$testScenarioName"
+echo "ls $testScenarioDirectory"
+ls $testScenarioDirectory
+
+counter=1
+for role in `ls $testScenarioDirectory`; do
+    roleScript="../../Scripts/cluster/hc/$counter.fromTemplate.hc.test.scenario.role.template"
+	cp ../../Scripts/templates/hc.test.scenario.role.template $roleScript
+	sed -i'' s/{{SCENARIO}}/$testScenarioName/g $roleScript
+	sed -i'' s/{{ROLE}}/$role/g $roleScript
+	counter=$(( counter+1 ))
+done
+
+
+
+
+# counter=1
+# for container in `ls $clusterDir/hc`; do
+# 	cp /Scripts/cluster/hc/$counter.* $clusterDir/hc/$container
+# 	counter=$(( counter+1 ))
+# done
+
+# export HC_SCALE=`ls ../../Scripts/cluster/hc -1 | wc -l`
+
+# #take down network
+# docker-compose $dockerComposeFile down
+# #rebuild all images
+# docker-compose $dockerComposeFile build --no-cache
+# #set scale
+# echo "docker-compose $dockerComposeFile scale hc=$HC_SCALE"
+# docker-compose scale "hc=$HC_SCALE"
+# echo "exported HC_SCALE=$HC_SCALE. Check the source maintains where necessary"
+# #bring network up
+# echo "docker-compose $dockerComposeFile up | tee ./$testName.output"
+# docker-compose $dockerComposeFile up | tee ./$testName.output
+
+# #run tests and analyse output
+# grep -q "hc.post.up.Scripts.run" ./$testName.output || { echo "failed: $failMessage" && exit 1; }
+
+# #remove extraneous files (log?)
+# #rm ./$testName.output
+
+# #terminate test
+# echo "passed. $successMessage"

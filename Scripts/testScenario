@@ -7,5 +7,6 @@ cd Scripts/tests
 
 
 echo "--- Test 4 - serve tests roles"
-./test.scenario.role.test  $1 "all tests complete" && echo "--- passed" || echo "--- failed"
+./test.scenario.role.test  $1 "all tests complete" 
+./test.hc.cluster.sync.test  hc.cluster.sync passed failed 5 "hc.cluster.sync 5 instances" && echo "--- passed" || echo "--- failed"
 echo
