@@ -9,7 +9,7 @@ for role in `ls $testScenarioDirectory`; do
     roleScript="../../Scripts/cluster/hc/$counter.fromTemplate.hc.test.scenario.role.template"
 	cp ../../Scripts/templates/hc.test.scenario.role.template $roleScript
 	sed -i'' s/{{SCENARIO}}/$testScenarioName/g $roleScript
-	sed -i'' s/{{ROLE}}/$role/g $roleScript
+	sed -i'' s/{{ROLE}}/${role%.json}/g $roleScript
 	counter=$(( counter+1 ))
 done
 
