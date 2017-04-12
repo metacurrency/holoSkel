@@ -15,3 +15,5 @@ echo
 echo "hc -debug test devchain $scenario $role"
 hc -debug test devchain $scenario $role
 echo
+echo "joined:"
+echo `cat ~/.holochain/devchain/dna.hash`
