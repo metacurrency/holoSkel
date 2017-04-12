@@ -4,6 +4,7 @@ export role="{{ROLE}}"
 
 
 ls /chain.seeded -la
+seedID=`cat /chain.seeded/devchain/.seedID`
 
 echo "hc init $HOSTNAME"
 hc init $HOSTNAME
@@ -12,7 +13,7 @@ echo
 echo "hc join /.holochain/devchain"
 hc join /chain.seeded/devchain devchain
 echo
-echo "hc test devchain $scenario $role"
-hc test devchain $scenario $role
+echo "hc test devchain $scenario $role $seedID"
+hc test devchain $scenario $role $seedID
 echo
 

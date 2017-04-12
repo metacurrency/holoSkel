@@ -58,4 +58,6 @@ echo "ls -la /chain.seeded/devchain"
 ls -la /chain.seeded/devchain
 echo 
 
+bs &
+
 rm $hackyCheatSync/.cluster.lock

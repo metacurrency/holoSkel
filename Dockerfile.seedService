@@ -11,3 +11,5 @@ RUN chmod 777 /chain.seeded
 #ENTRYPOINT
 
 #ENTRYPOINT echo "overloading entrypoint to log in as root"
+
+EXPOSE 10000
