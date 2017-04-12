@@ -1,1 +1,1 @@
-docker build -f Dockerfile.dev -t dev.chain .
+docker build -f Dockerfile.$1 -t dev.${1,,} .
