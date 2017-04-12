@@ -1,6 +1,6 @@
 #!/bin/sh
-export scenario="scenario.1"
-export role="role.2"
+export scenario="backnforth"
+export role="person2"
 
 
 ls /chain.seeded -la
