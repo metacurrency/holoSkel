@@ -12,8 +12,7 @@ for role in `ls $testScenarioDirectory`; do
 	sed -i'' s/{{ROLE}}/${role%.json}/g $roleScript
 	counter=$(( counter+1 ))
 done
-
-
+cp ../../Scripts/templates/hc.serve.template ../../Scripts/cluster/hc/$counter.fromTemplate.hc.serve.template
 
 
 # counter=1
