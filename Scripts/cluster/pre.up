@@ -4,6 +4,10 @@ echo #!/bin/sh $0
 rm -rf /home/user/.holochain/devchain
 rm -rf /chain.seeded/devchain
 
+hackyCheatSync="/chain.seeded/devchain"
+mkdir /chain.seeded/devchain
+touch $hackyCheatSync/.cluster.lock
+
 echo "hc init $HOSTNAME"
 hc init $HOSTNAME
 echo
@@ -53,3 +57,5 @@ echo
 echo "ls -la /chain.seeded/devchain"
 ls -la /chain.seeded/devchain
 echo 
+
+rm $hackyCheatSync/.cluster.lock
