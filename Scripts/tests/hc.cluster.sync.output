@@ -1,7 +1,13 @@
 Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc.post.up_1
 [36mservice.chain_1  |[0m Starting with UID : 1002
 [36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m hc init 8133d983388e
+[33mhc_2             |[0m Starting with UID : 1002
+[33mhc_2             |[0m 
+[33mhc_2             |[0m 
+[33mhc_2             |[0m Seed host name: 9e0fe88174c2
+[33mhc_2             |[0m My host name: 1067a8ec0f88
+[36mservice.chain_1  |[0m hc init 9e0fe88174c2
+[33mhc_2             |[0m 
 [36mservice.chain_1  |[0m Holochain service initialized
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m hc clone /chain.source devchain
@@ -13,7 +19,6 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m Test 'test_4.0' t+0ms: { myZome addPrime map[prime:4]  Error calling 'commit': Invalid entry: {"Atype":"hash", "prime":4, "zKeyOrder":["prime"]}  0}
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m =====================
-[33mhc_2             |[0m Starting with UID : 1002
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m Test: test_4:0
 [36mservice.chain_1  |[0m 	Expected error:	Error calling 'commit': Invalid entry: {"Atype":"hash", "prime":4, "zKeyOrder":["prime"]}
@@ -23,12 +28,17 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test: 'test_5' starting...
 [36mservice.chain_1  |[0m ========================================
+[32mhc_1             |[0m Starting with UID : 1002
+[32mhc_1             |[0m 
+[32mhc_1             |[0m 
+[32mhc_1             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/9e0fe88174c2/hc': File exists
+[32mhc_1             |[0m Seed host name: 9e0fe88174c2
+[32mhc_1             |[0m My host name: 9e11afbe7aaf
+[32mhc_1             |[0m 
 [36mservice.chain_1  |[0m Test 'test_5.0' t+0ms: { jsZome addProfile map[firstName:Art lastName:Brock] "%h%"   0}
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m =====================
-[33mhc_2             |[0m 
 [36mservice.chain_1  |[0m 
-[33mhc_2             |[0m 
 [36mservice.chain_1  |[0m Test: test_5:0
 [36mservice.chain_1  |[0m 	Expected:	"%!h(MISSING)%!"(MISSING)
 [36mservice.chain_1  |[0m 	Got Error:		unknown zome: jsZome
@@ -49,18 +59,7 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m 	failed! m(
 [36mservice.chain_1  |[0m =====================
 [36mservice.chain_1  |[0m ========================================
-[33mhc_2             |[0m Seed host name: 8133d983388e
-[33mhc_2             |[0m My host name: aeb6ad6539f0
-[33mhc_2             |[0m 
-[32mhc_1             |[0m Starting with UID : 1002
-[32mhc_1             |[0m 
-[35mhc.post.up_1     |[0m Starting with UID : 1002
 [36mservice.chain_1  |[0m Test: 'grouped' starting...
-[32mhc_1             |[0m 
-[32mhc_1             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/8133d983388e/hc': File exists
-[32mhc_1             |[0m Seed host name: 8133d983388e
-[32mhc_1             |[0m My host name: f45ec59f5968
-[32mhc_1             |[0m 
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test 'grouped.0' t+0ms: { jsZome addOdd 7 %h%   0}
 [36mservice.chain_1  |[0m 
@@ -69,6 +68,7 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m Test: grouped:0
 [36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
 [36mservice.chain_1  |[0m (MISSING)	Got Error:		unknown zome: jsZome
+[35mhc.post.up_1     |[0m Starting with UID : 1002
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m 	failed! m(
 [36mservice.chain_1  |[0m =====================
@@ -76,11 +76,13 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m =====================
 [36mservice.chain_1  |[0m 
+[35mhc.post.up_1     |[0m 
 [36mservice.chain_1  |[0m Test: grouped:1
 [36mservice.chain_1  |[0m 	Expected error:	Invalid entry: 2
 [36mservice.chain_1  |[0m 	Got error:		unknown zome: jsZome
 [36mservice.chain_1  |[0m 	failed! m(
 [36mservice.chain_1  |[0m =====================
+[35mhc.post.up_1     |[0m ls /chain.seeded/devchain/cluster/9e0fe88174c2/hc
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test: 'test_0' starting...
 [36mservice.chain_1  |[0m ========================================
@@ -95,14 +97,17 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m 	failed! m(
 [36mservice.chain_1  |[0m =====================
 [36mservice.chain_1  |[0m ========================================
+[35mhc.post.up_1     |[0m 1067a8ec0f88
 [36mservice.chain_1  |[0m Test: 'test_1' starting...
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test 'test_1.0' t+0ms: { myZome addData 4 %h%   0}
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m =====================
 [36mservice.chain_1  |[0m 
+[35mhc.post.up_1     |[0m 9e11afbe7aaf
 [36mservice.chain_1  |[0m Test: test_1:0
 [36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
+[35mhc.post.up_1     |[0m unlocking cluster 9e0fe88174c2
 [36mservice.chain_1  |[0m (MISSING)	Got Error:		unknown zome: myZome
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m 	failed! m(
@@ -126,12 +131,7 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m =====================
 [36mservice.chain_1  |[0m 
-[35mhc.post.up_1     |[0m 
-[35mhc.post.up_1     |[0m ls /chain.seeded/devchain/cluster/8133d983388e/hc
 [36mservice.chain_1  |[0m Test: test_3:0
-[35mhc.post.up_1     |[0m aeb6ad6539f0
-[35mhc.post.up_1     |[0m f45ec59f5968
-[35mhc.post.up_1     |[0m unlocking cluster 8133d983388e
 [36mservice.chain_1  |[0m 	Expected:	"%!h(MISSING)%!"(MISSING)
 [36mservice.chain_1  |[0m 	Got Error:		unknown zome: myZome
 [36mservice.chain_1  |[0m 
@@ -141,7 +141,6 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m ==================================================================
 [36mservice.chain_1  |[0m 		+++++ 9 test(s) failed :( +++++
 [36mservice.chain_1  |[0m ==================================================================
-[32mhc_1             |[0m f45ec59f5968 > sync completed
 [36mservice.chain_1  |[0m Error: Error calling 'commit': Invalid entry: {"Atype":"hash", "prime":4, "zKeyOrder":["prime"]}
 [36mservice.chain_1  |[0m Test: test_5:0
 [36mservice.chain_1  |[0m 	Expected:	"%!h(MISSING)%!"(MISSING)
@@ -153,11 +152,6 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m Test: grouped:0
 [36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
-[32mhc_1             |[0m total 12
-[32mhc_1             |[0m drwxrwxrwx    3 root     holochai      4096 Apr 12 23:15 .
-[32mhc_1             |[0m drwxr-xr-x   63 root     root          4096 Apr 12 23:15 ..
-[32mhc_1             |[0m drwxr-xr-x    7 user     user          4096 Apr 12 23:15 devchain
-[32mhc_1             |[0m hc init f45ec59f5968
 [36mservice.chain_1  |[0m (MISSING)	Got Error:		unknown zome: jsZome
 [36mservice.chain_1  |[0m Invalid entry: 2
 [36mservice.chain_1  |[0m Test: test_0:0
@@ -174,16 +168,16 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m hc seed devchain
-[36mservice.chain_1  |[0m holochain id:QmXYyaSWza1qLQcJ5WPX1caqn8NbQdGdXUSxcE9sins43D
+[36mservice.chain_1  |[0m holochain id:Qme7MuYkachUMBPEDau41ywhRaVwzoL6TEZoXEABEwCCKC
 [36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m seedID: 8133d983388e
-[36mservice.chain_1  |[0m touch /home/user/.holochain/devchain/cluster/8133d983388e/.cluster.lock
+[36mservice.chain_1  |[0m seedID: 9e0fe88174c2
+[36mservice.chain_1  |[0m touch /home/user/.holochain/devchain/cluster/9e0fe88174c2/.cluster.lock
 [36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m ls -la /home/user/.holochain/devchain/cluster/8133d983388e
+[36mservice.chain_1  |[0m ls -la /home/user/.holochain/devchain/cluster/9e0fe88174c2
 [36mservice.chain_1  |[0m total 8
-[36mservice.chain_1  |[0m drwxr-sr-x    2 user     holochai      4096 Apr 12 23:15 .
-[36mservice.chain_1  |[0m drwxr-sr-x    3 user     holochai      4096 Apr 12 23:15 ..
-[36mservice.chain_1  |[0m -rw-r--r--    1 user     holochai         0 Apr 12 23:15 .cluster.lock
+[36mservice.chain_1  |[0m drwxr-sr-x    2 user     holochai      4096 Apr 12 23:17 .
+[36mservice.chain_1  |[0m drwxr-sr-x    3 user     holochai      4096 Apr 12 23:17 ..
+[36mservice.chain_1  |[0m -rw-r--r--    1 user     holochai         0 Apr 12 23:17 .cluster.lock
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m ls /home/user/.holochain
 [36mservice.chain_1  |[0m agent.txt
@@ -195,23 +189,29 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m ls -la /chain.seeded/devchain
 [36mservice.chain_1  |[0m total 36
-[36mservice.chain_1  |[0m drwxr-xr-x    7 user     user          4096 Apr 12 23:15 .
-[36mservice.chain_1  |[0m drwxrwxrwx    3 root     holochai      4096 Apr 12 23:15 ..
-[36mservice.chain_1  |[0m -rw-r--r--    1 user     user             0 Apr 12 23:15 .cluster.lock
-[36mservice.chain_1  |[0m -rw-r--r--    1 user     user            13 Apr 12 23:15 .seedID
-[36mservice.chain_1  |[0m drwxr-sr-x    3 user     user          4096 Apr 12 23:15 cluster
-[36mservice.chain_1  |[0m -rw-r--r--    1 user     user           829 Apr 12 23:15 config.json
-[36mservice.chain_1  |[0m drwxr-sr-x    2 user     user          4096 Apr 12 23:15 db
-[36mservice.chain_1  |[0m drwxr-sr-x    6 user     user          4096 Apr 12 23:15 dna
-[36mservice.chain_1  |[0m drwxr-sr-x    4 user     user          4096 Apr 12 23:15 test
-[36mservice.chain_1  |[0m drwxr-sr-x    2 user     user          4096 Apr 12 23:15 ui
+[36mservice.chain_1  |[0m drwxr-xr-x    7 user     user          4096 Apr 12 23:17 .
+[36mservice.chain_1  |[0m drwxrwxrwx    3 root     holochai      4096 Apr 12 23:17 ..
+[36mservice.chain_1  |[0m -rw-r--r--    1 user     user             0 Apr 12 23:17 .cluster.lock
+[36mservice.chain_1  |[0m -rw-r--r--    1 user     user            13 Apr 12 23:17 .seedID
+[36mservice.chain_1  |[0m drwxr-sr-x    3 user     user          4096 Apr 12 23:17 cluster
+[36mservice.chain_1  |[0m -rw-r--r--    1 user     user           829 Apr 12 23:17 config.json
+[36mservice.chain_1  |[0m drwxr-sr-x    2 user     user          4096 Apr 12 23:17 db
+[36mservice.chain_1  |[0m drwxr-sr-x    6 user     user          4096 Apr 12 23:17 dna
+[36mservice.chain_1  |[0m drwxr-sr-x    4 user     user          4096 Apr 12 23:17 test
+[36mservice.chain_1  |[0m drwxr-sr-x    2 user     user          4096 Apr 12 23:17 ui
 [36mservice.chain_1  |[0m 
+[33mhc_2             |[0m 1067a8ec0f88 > sync completed
+[33mhc_2             |[0m hello world
 [36mdevchain_service.chain_1 exited with code 0
-[0m[32mhc_1             |[0m Holochain service initialized
+[0m[32mhc_1             |[0m 9e11afbe7aaf > sync completed
+[32mhc_1             |[0m total 12
+[32mhc_1             |[0m drwxrwxrwx    3 root     holochai      4096 Apr 12 23:17 .
+[32mhc_1             |[0m drwxr-xr-x   63 root     root          4096 Apr 12 23:17 ..
+[32mhc_1             |[0m drwxr-xr-x    7 user     user          4096 Apr 12 23:17 devchain
+[32mhc_1             |[0m hc init 9e11afbe7aaf
+[32mhc_1             |[0m Holochain service initialized
 [32mhc_1             |[0m 
 [32mhc_1             |[0m hc join /.holochain/devchain
-[33mhc_2             |[0m aeb6ad6539f0 > sync completed
-[33mhc_2             |[0m hello world
 [32mhc_1             |[0m 
 [32mhc_1             |[0m hc serve devchain
 [32mhc_1             |[0m starting server on localhost:3141

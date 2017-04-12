@@ -17,6 +17,7 @@ services:
       dockerfile: Dockerfile.serveInstance
     ports:
       - "3141"
+      - "6283"
     environment:
       - LOCAL_USER_ID
     volumes:
