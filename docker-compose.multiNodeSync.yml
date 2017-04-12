@@ -11,6 +11,20 @@ services:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
     command: /Scripts/cluster/pre.up
+  bs:
+    build:
+      context: .
+      dockerfile: Dockerfile.bsService
+    ports:
+      - "10000"
+    environment:
+      - LOCAL_USER_ID
+    volumes:
+      - seed:/chain.seeded
+      - ./Scripts:/Scripts
+    command: /Scripts/cluster/bs.sync
+    #command: /bin/sh
+    depends_on: [service.chain]
   hc:
     build:
       context: .
@@ -25,7 +39,7 @@ services:
       - ./Scripts:/Scripts
     command: /Scripts/cluster/hc.sync
     #command: /bin/sh
-    depends_on: [service.chain]
+    depends_on: [bs]
   hc.post.up:
     build:
       context: .
