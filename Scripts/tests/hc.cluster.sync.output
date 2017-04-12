@@ -1,78 +1,12 @@
 Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc.post.up_1
 [36mservice.chain_1  |[0m Starting with UID : 1002
 [36mservice.chain_1  |[0m 
-[33mhc_2             |[0m Starting with UID : 1002
-[33mhc_2             |[0m 
-[33mhc_2             |[0m 
-[33mhc_2             |[0m Seed host name: 54c7f3785a1f
-[33mhc_2             |[0m My host name: d3da2504ba91
-[33mhc_2             |[0m 
-[32mhc_1             |[0m Starting with UID : 1002
-[32mhc_1             |[0m 
-[32mhc_1             |[0m 
-[32mhc_1             |[0m Seed host name: 54c7f3785a1f
-[32mhc_1             |[0m My host name: fb311a366e79
-[32mhc_1             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/54c7f3785a1f/hc': File exists
-[32mhc_1             |[0m 
-[36mservice.chain_1  |[0m hc init 54c7f3785a1f
+[36mservice.chain_1  |[0m hc init c3b62610864f
 [36mservice.chain_1  |[0m Holochain service initialized
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m hc clone /chain.source devchain
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m hc test devchain
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test: 'test_6' starting...
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test 'test_6' line 0: {myZome getDNA  %dna%  }
-[36mservice.chain_1  |[0m passed! ✔
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test: 'grouped' starting...
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test 'grouped' line 0: {jsZome addOdd 7 %h%  }
-[36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m =====================
-[36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m Test: grouped:0
-[36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
-[36mservice.chain_1  |[0m (MISSING)	Got Error:		Error executing validateCommit: ReferenceError: 'validateCommit' is not defined
-[36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m 	failed! m(
-[36mservice.chain_1  |[0m =====================
-[36mservice.chain_1  |[0m Test 'grouped' line 1: {jsZome addOdd 2  Invalid entry: 2 }
-[36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m =====================
-[36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m Test: grouped:1
-[36mservice.chain_1  |[0m 	Expected error:	Invalid entry: 2
-[36mservice.chain_1  |[0m 	Got error:		Error executing validateCommit: ReferenceError: 'validateCommit' is not defined
-[36mservice.chain_1  |[0m 	failed! m(
-[36mservice.chain_1  |[0m =====================
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test: 'test_0' starting...
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test 'test_0' line 0: {myZome addData 2 %h%  }
-[36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m =====================
-[36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m Test: test_0:0
-[36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
-[36mservice.chain_1  |[0m (MISSING)	Got Error:		Error calling 'commit': Error executing validateCommit: symbol `validateCommit` not found
-[36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m 	failed! m(
-[36mservice.chain_1  |[0m =====================
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test: 'test_1' starting...
-[36mservice.chain_1  |[0m ========================================
-[36mservice.chain_1  |[0m Test 'test_1' line 0: {myZome addData 4 %h%  }
-[36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m =====================
-[36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m Test: test_1:0
-[36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
-[36mservice.chain_1  |[0m (MISSING)	Got Error:		Error calling 'commit': Error executing validateCommit: symbol `validateCommit` not found
-[36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m 	failed! m(
-[36mservice.chain_1  |[0m =====================
 [36mservice.chain_1  |[0m ========================================
 [36mservice.chain_1  |[0m Test: 'test_2' starting...
 [36mservice.chain_1  |[0m ========================================
@@ -118,52 +52,128 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m =====================
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m Test: test_5:0
-[36mservice.chain_1  |[0m 	Expected:	"QmZjLstMVtv1T56NnEaBS2JRgoBxoYFJXDAdgr36bA5Wpj"
+[36mservice.chain_1  |[0m 	Expected:	"QmP4wCSYe94TLYZa8quBELpCshXXL1deMg9QRbyzZHDK75"
 [36mservice.chain_1  |[0m 	Got:		{"message":"Error executing validateCommit: ReferenceError: 'validateCommit' is not defined","name":"HolochainError"}
+[36mservice.chain_1  |[0m 	failed! m(
+[36mservice.chain_1  |[0m =====================
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'test_6' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'test_6' line 0: {myZome getDNA  %dna%  }
+[36mservice.chain_1  |[0m passed! ✔
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'grouped' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'grouped' line 0: {jsZome addOdd 7 %h%  }
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m =====================
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m Test: grouped:0
+[36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
+[36mservice.chain_1  |[0m (MISSING)	Got Error:		Error executing validateCommit: ReferenceError: 'validateCommit' is not defined
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m 	failed! m(
+[36mservice.chain_1  |[0m =====================
+[36mservice.chain_1  |[0m Test 'grouped' line 1: {jsZome addOdd 2  Invalid entry: 2 }
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m =====================
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m Test: grouped:1
+[36mservice.chain_1  |[0m 	Expected error:	Invalid entry: 2
+[36mservice.chain_1  |[0m 	Got error:		Error executing validateCommit: ReferenceError: 'validateCommit' is not defined
+[36mservice.chain_1  |[0m 	failed! m(
+[36mservice.chain_1  |[0m =====================
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'test_0' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'test_0' line 0: {myZome addData 2 %h%  }
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m =====================
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m Test: test_0:0
+[36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
+[33mhc_2             |[0m Starting with UID : 1002
+[33mhc_2             |[0m 
+[33mhc_2             |[0m 
+[33mhc_2             |[0m Seed host name: c3b62610864f
+[33mhc_2             |[0m My host name: f0cd98c6bfce
+[33mhc_2             |[0m 
+[36mservice.chain_1  |[0m (MISSING)	Got Error:		Error calling 'commit': Error executing validateCommit: symbol `validateCommit` not found
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m 	failed! m(
+[36mservice.chain_1  |[0m =====================
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test: 'test_1' starting...
+[36mservice.chain_1  |[0m ========================================
+[36mservice.chain_1  |[0m Test 'test_1' line 0: {myZome addData 4 %h%  }
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m =====================
+[36mservice.chain_1  |[0m 
+[36mservice.chain_1  |[0m Test: test_1:0
+[36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
+[36mservice.chain_1  |[0m (MISSING)	Got Error:		Error calling 'commit': Error executing validateCommit: symbol `validateCommit` not found
+[36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m 	failed! m(
 [36mservice.chain_1  |[0m =====================
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m ==================================================================
 [36mservice.chain_1  |[0m 		+++++ 8 test(s) failed :( +++++
 [36mservice.chain_1  |[0m ==================================================================
-[35mhc.post.up_1     |[0m Starting with UID : 1002
-[36mservice.chain_1  |[0m Error: 
+[36mservice.chain_1  |[0m Error: Error calling 'commit': Invalid entry: 5
+[36mservice.chain_1  |[0m Test: test_3:0
+[36mservice.chain_1  |[0m 	Expected:	"%!h(MISSING)%!"(MISSING)
+[32mhc_1             |[0m Starting with UID : 1002
+[36mservice.chain_1  |[0m 	Got Error:		Error calling 'commit': Error executing validateCommit: symbol `validateCommit` not found
+[32mhc_1             |[0m 
+[32mhc_1             |[0m 
+[36mservice.chain_1  |[0m Error calling 'commit': Invalid entry: {"Atype":"hash", "prime":4, "zKeyOrder":["prime"]}
+[36mservice.chain_1  |[0m Test: test_5:0
+[36mservice.chain_1  |[0m 	Expected:	"QmP4wCSYe94TLYZa8quBELpCshXXL1deMg9QRbyzZHDK75"
+[32mhc_1             |[0m Seed host name: c3b62610864f
+[32mhc_1             |[0m My host name: 2164df16cea9
+[32mhc_1             |[0m mkdir: can't create directory '/chain.seeded/devchain/cluster/c3b62610864f/hc': File exists
+[32mhc_1             |[0m 
+[32mhc_1             |[0m 2164df16cea9 > sync completed
+[32mhc_1             |[0m total 12
+[36mservice.chain_1  |[0m 	Got:		{"message":"Error executing validateCommit: ReferenceError: 'validateCommit' is not defined","name":"HolochainError"}
 [36mservice.chain_1  |[0m Test: grouped:0
-[36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
+[35mhc.post.up_1     |[0m Starting with UID : 1002
+[32mhc_1             |[0m drwxrwxrwx    3 root     holochai      4096 Apr 12 19:12 .
+[33mhc_2             |[0m f0cd98c6bfce > sync completed
+[32mhc_1             |[0m drwxr-xr-x   63 root     root          4096 Apr 12 19:12 ..
 [35mhc.post.up_1     |[0m 
+[36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
 [36mservice.chain_1  |[0m (MISSING)	Got Error:		Error executing validateCommit: ReferenceError: 'validateCommit' is not defined
+[33mhc_2             |[0m total 12
+[33mhc_2             |[0m drwxrwxrwx    3 root     holochai      4096 Apr 12 19:12 .
+[35mhc.post.up_1     |[0m ls /chain.seeded/devchain/cluster/c3b62610864f/hc
+[33mhc_2             |[0m drwxr-xr-x   63 root     root          4096 Apr 12 19:12 ..
 [36mservice.chain_1  |[0m Invalid entry: 2
+[35mhc.post.up_1     |[0m 2164df16cea9
+[35mhc.post.up_1     |[0m f0cd98c6bfce
+[33mhc_2             |[0m drwxr-xr-x    7 user     user          4096 Apr 12 19:12 devchain
 [36mservice.chain_1  |[0m Test: test_0:0
 [36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
+[33mhc_2             |[0m hc init f0cd98c6bfce
 [36mservice.chain_1  |[0m (MISSING)	Got Error:		Error calling 'commit': Error executing validateCommit: symbol `validateCommit` not found
+[35mhc.post.up_1     |[0m unlocking cluster c3b62610864f
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m Test: test_1:0
 [36mservice.chain_1  |[0m 	Expected:	%!h(MISSING)%!
 [36mservice.chain_1  |[0m (MISSING)	Got Error:		Error calling 'commit': Error executing validateCommit: symbol `validateCommit` not found
-[36mservice.chain_1  |[0m Error calling 'commit': Invalid entry: 5
-[36mservice.chain_1  |[0m Test: test_3:0
-[36mservice.chain_1  |[0m 	Expected:	"%!h(MISSING)%!"(MISSING)
-[36mservice.chain_1  |[0m 	Got Error:		Error calling 'commit': Error executing validateCommit: symbol `validateCommit` not found
-[36mservice.chain_1  |[0m Error calling 'commit': Invalid entry: {"Atype":"hash", "prime":4, "zKeyOrder":["prime"]}
-[35mhc.post.up_1     |[0m ls /chain.seeded/devchain/cluster/54c7f3785a1f/hc
-[36mservice.chain_1  |[0m Test: test_5:0
-[36mservice.chain_1  |[0m 	Expected:	"QmZjLstMVtv1T56NnEaBS2JRgoBxoYFJXDAdgr36bA5Wpj"
-[36mservice.chain_1  |[0m 	Got:		{"message":"Error executing validateCommit: ReferenceError: 'validateCommit' is not defined","name":"HolochainError"}
-[35mhc.post.up_1     |[0m d3da2504ba91
-[35mhc.post.up_1     |[0m fb311a366e79
+[36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m hc seed devchain
-[35mhc.post.up_1     |[0m unlocking cluster 54c7f3785a1f
-[36mservice.chain_1  |[0m holochain id:QmUuyWkv8VEUyCbENY3B3G5YVcq3yJ5u2TY1cuhfTrzFNd
+[36mservice.chain_1  |[0m holochain id:QmYZnTJk3PxD3kwWVrS3fmDUon6iH52MAY6xnghdLYpZzC
 [36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m seedID: 54c7f3785a1f
-[36mservice.chain_1  |[0m touch /home/user/.holochain/devchain/cluster/54c7f3785a1f/.cluster.lock
+[36mservice.chain_1  |[0m seedID: c3b62610864f
+[36mservice.chain_1  |[0m touch /home/user/.holochain/devchain/cluster/c3b62610864f/.cluster.lock
 [36mservice.chain_1  |[0m 
-[36mservice.chain_1  |[0m ls -la /home/user/.holochain/devchain/cluster/54c7f3785a1f
+[36mservice.chain_1  |[0m ls -la /home/user/.holochain/devchain/cluster/c3b62610864f
 [36mservice.chain_1  |[0m total 8
-[36mservice.chain_1  |[0m drwxr-sr-x    2 user     holochai      4096 Apr 12 18:50 .
-[36mservice.chain_1  |[0m drwxr-sr-x    3 user     holochai      4096 Apr 12 18:50 ..
-[36mservice.chain_1  |[0m -rw-r--r--    1 user     holochai         0 Apr 12 18:50 .cluster.lock
+[36mservice.chain_1  |[0m drwxr-sr-x    2 user     holochai      4096 Apr 12 19:12 .
+[36mservice.chain_1  |[0m drwxr-sr-x    3 user     holochai      4096 Apr 12 19:12 ..
+[36mservice.chain_1  |[0m -rw-r--r--    1 user     holochai         0 Apr 12 19:12 .cluster.lock
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m ls /home/user/.holochain
 [36mservice.chain_1  |[0m agent.txt
@@ -173,42 +183,32 @@ Attaching to devchain_service.chain_1, devchain_hc_2, devchain_hc_1, devchain_hc
 [36mservice.chain_1  |[0m 
 [36mservice.chain_1  |[0m cp /home/user/.holochain/devchain /chain.seeded -r
 [36mservice.chain_1  |[0m 
+[32mhc_1             |[0m drwxr-xr-x    7 user     user          4096 Apr 12 19:12 devchain
+[32mhc_1             |[0m hc init 2164df16cea9
 [36mservice.chain_1  |[0m ls -la /chain.seeded/devchain
 [36mservice.chain_1  |[0m total 36
-[36mservice.chain_1  |[0m drwxr-xr-x    7 user     user          4096 Apr 12 18:50 .
-[36mservice.chain_1  |[0m drwxrwxrwx    3 root     holochai      4096 Apr 12 18:50 ..
-[36mservice.chain_1  |[0m -rw-r--r--    1 user     user             0 Apr 12 18:50 .cluster.lock
-[36mservice.chain_1  |[0m -rw-r--r--    1 user     user            13 Apr 12 18:50 .seedID
-[36mservice.chain_1  |[0m drwxr-sr-x    3 user     user          4096 Apr 12 18:50 cluster
-[36mservice.chain_1  |[0m -rw-r--r--    1 user     user           604 Apr 12 18:50 config.toml
-[33mhc_2             |[0m d3da2504ba91 > sync completed
-[36mservice.chain_1  |[0m drwxr-sr-x    2 user     user          4096 Apr 12 18:50 db
-[36mservice.chain_1  |[0m drwxr-sr-x    4 user     user          4096 Apr 12 18:50 dna
-[36mservice.chain_1  |[0m drwxr-sr-x    4 user     user          4096 Apr 12 18:50 test
-[36mservice.chain_1  |[0m drwxr-sr-x    2 user     user          4096 Apr 12 18:50 ui
-[36mservice.chain_1  |[0m 
-[33mhc_2             |[0m total 12
-[33mhc_2             |[0m drwxrwxrwx    3 root     holochai      4096 Apr 12 18:50 .
-[33mhc_2             |[0m drwxr-xr-x   63 root     root          4096 Apr 12 18:50 ..
-[33mhc_2             |[0m drwxr-xr-x    7 user     user          4096 Apr 12 18:50 devchain
-[33mhc_2             |[0m hc init d3da2504ba91
-[36mdevchain_service.chain_1 exited with code 0
-[0m[33mhc_2             |[0m Holochain service initialized
-[33mhc_2             |[0m 
-[33mhc_2             |[0m hc join /.holochain/devchain
-[32mhc_1             |[0m fb311a366e79 > sync completed
-[32mhc_1             |[0m total 12
-[32mhc_1             |[0m drwxrwxrwx    3 root     holochai      4096 Apr 12 18:50 .
-[32mhc_1             |[0m drwxr-xr-x   63 root     root          4096 Apr 12 18:50 ..
-[32mhc_1             |[0m drwxr-xr-x    7 user     user          4096 Apr 12 18:50 devchain
-[32mhc_1             |[0m hc init fb311a366e79
 [32mhc_1             |[0m Holochain service initialized
+[36mservice.chain_1  |[0m drwxr-xr-x    7 user     user          4096 Apr 12 19:12 .
+[36mservice.chain_1  |[0m drwxrwxrwx    3 root     holochai      4096 Apr 12 19:12 ..
+[36mservice.chain_1  |[0m -rw-r--r--    1 user     user             0 Apr 12 19:12 .cluster.lock
+[36mservice.chain_1  |[0m -rw-r--r--    1 user     user            13 Apr 12 19:12 .seedID
+[36mservice.chain_1  |[0m drwxr-sr-x    3 user     user          4096 Apr 12 19:12 cluster
+[36mservice.chain_1  |[0m -rw-r--r--    1 user     user           604 Apr 12 19:12 config.toml
+[36mservice.chain_1  |[0m drwxr-sr-x    2 user     user          4096 Apr 12 19:12 db
+[36mservice.chain_1  |[0m drwxr-sr-x    4 user     user          4096 Apr 12 19:12 dna
+[36mservice.chain_1  |[0m drwxr-sr-x    4 user     user          4096 Apr 12 19:12 test
+[36mservice.chain_1  |[0m drwxr-sr-x    2 user     user          4096 Apr 12 19:12 ui
+[36mservice.chain_1  |[0m 
 [32mhc_1             |[0m 
-[32mhc_1             |[0m hc join /.holochain/devchain
+[33mhc_2             |[0m Holochain service initialized
 [33mhc_2             |[0m 
-[33mhc_2             |[0m hc test devchain scenario.1 role.1
+[32mhc_1             |[0m hc join /.holochain/devchain
+[33mhc_2             |[0m hc join /.holochain/devchain
+[36mdevchain_service.chain_1 exited with code 0
+[0m[33mhc_2             |[0m 
+[33mhc_2             |[0m hc test devchain scenario.1 role.2
 [32mhc_1             |[0m 
-[32mhc_1             |[0m hc test devchain scenario.1 role.2
+[32mhc_1             |[0m hc test devchain scenario.1 role.1
 [33mhc_2             |[0m Error: chain already started
 [33mhc_2             |[0m 
 [32mhc_1             |[0m Error: chain already started
