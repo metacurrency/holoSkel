@@ -9,7 +9,6 @@ echo
 echo "hc join /.holochain/devchain"
 hc join /chain.seeded/devchain devchain
 echo
-echo "hc serve devchain"
-hc serve devchain
+echo "hc -debug serve devchain"
+hc -debug serve devchain
 echo
-
