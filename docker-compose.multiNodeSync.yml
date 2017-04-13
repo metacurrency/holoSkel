@@ -11,6 +11,19 @@ services:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
     command: /Scripts/cluster/pre.up
+  bs:
+    build:
+      context: .
+      dockerfile: Dockerfile.bs
+    ports:
+      - "3142"
+    environment:
+      - LOCAL_USER_ID
+    volumes:
+      - seed:/chain.seeded
+      - ./Scripts:/Scripts
+    depends_on: [service.chain]
+    command: /bin/sh -c /Scripts/cluster/bs.start
   hc:
     build:
       context: .
@@ -39,4 +52,4 @@ services:
     depends_on: [hc]
 
 volumes:
-  seed: 
+  seed:

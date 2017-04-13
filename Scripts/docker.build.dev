@@ -1,1 +1,1 @@
-docker build -f Dockerfile.$1 -t dev.${1,,} .
+docker build --no-cache -f Dockerfile.$1 -t dev.${1,,} .
