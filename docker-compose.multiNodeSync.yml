@@ -17,6 +17,8 @@ services:
       dockerfile: Dockerfile.bs
     ports:
       - "3142"
+    environment:
+      - LOCAL_USER_ID
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
