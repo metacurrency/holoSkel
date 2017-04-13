@@ -1,6 +1,6 @@
 #!/bin/sh
 echo #!/bin/sh $0
-echo `hc -version`
+
 rm -rf /home/user/.holochain/devchain
 rm -rf /chain.seeded/devchain
 
@@ -14,7 +14,7 @@ echo
 
 echo "hc clone /chain.source devchain"
 hc clone /chain.source devchain
-echo
+echo 
 
 echo "hc test devchain"
 hc test devchain
@@ -29,7 +29,7 @@ echo
 
 echo "$HOSTNAME" > /home/user/.holochain/devchain/.seedID
 seedID=`cat /home/user/.holochain/devchain/.seedID`
-echo "seedID: $seedID"
+echo "seedID: $seedID" 
 
 clusterDir="/home/user/.holochain/devchain/cluster/$seedID"
 mkdir /home/user/.holochain/devchain/cluster
@@ -52,10 +52,10 @@ echo
 
 echo "cp /home/user/.holochain/devchain /chain.seeded -r"
 cp /home/user/.holochain/devchain /chain.seeded -r
-echo
+echo 
 
 echo "ls -la /chain.seeded/devchain"
 ls -la /chain.seeded/devchain
-echo
+echo 
 
 rm $hackyCheatSync/.cluster.lock

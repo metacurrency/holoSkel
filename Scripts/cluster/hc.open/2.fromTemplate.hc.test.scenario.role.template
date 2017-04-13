@@ -1,6 +1,6 @@
 #!/bin/sh
-export scenario={{SCENARIO}}
-export role={{ROLE}}
+export scenario="scenario.1"
+export role="role.2"
 
 
 ls /chain.seeded -la
@@ -12,7 +12,7 @@ echo
 echo "hc join /.holochain/devchain"
 hc join /chain.seeded/devchain devchain
 echo
-echo "hc serve devchain"
-hc test $scenario $role
+echo "hc test devchain $scenario $role"
+hc test devchain $scenario $role
 echo
 

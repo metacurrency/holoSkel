@@ -1,0 +1,1 @@
+docker volume ls -f dangling=true
