@@ -1,5 +1,6 @@
 #!/bin/sh
 echo #!/bin/sh $0
+sleep 1
 
 hackyCheatSync="/chain.seeded/devchain"
 /Scripts/cluster/sync  $hackyCheatSync
