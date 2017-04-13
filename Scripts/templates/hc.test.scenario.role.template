@@ -13,6 +13,6 @@ echo "hc join /.holochain/devchain"
 hc join /chain.seeded/devchain devchain
 echo
 echo "hc test devchain $scenario $role"
-hc test devchain $scenario $role
+hc -debug test devchain $scenario $role
 echo
 
