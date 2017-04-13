@@ -1,1 +1,1 @@
-docker run   -e LOCAL_USER_ID=1002 -v ~/.holochain:/home/user/holochain -P -ti dev.${1,,} /bin/sh
+docker run --security-opt=seccomp:unconfined  -e LOCAL_USER_ID=1002 -v ~/.holochain:/home/user/holochain -P -ti dev.${1,,} /bin/sh

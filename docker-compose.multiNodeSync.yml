@@ -10,7 +10,7 @@ services:
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
-    command: /Scripts/cluster/pre.up
+    command: [/bin/sh -c "/Scripts/cluster/pre.up"]
   bs:
     build:
       context: .
@@ -22,7 +22,7 @@ services:
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
-    command: /bin/sh -c /Scripts/cluster/bs.start
+    command: [/bin/sh -c "/Scripts/cluster/bs.start"]
     privileged: True
   hc:
     build:
@@ -36,7 +36,7 @@ services:
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
-    command: /Scripts/cluster/hc.sync
+    command: [/bin/sh -c "/Scripts/cluster/hc.sync"]
     #command: /bin/sh
     depends_on: [service.chain]
   hc.post.up:
@@ -48,7 +48,7 @@ services:
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
-    command: /Scripts/cluster/post.up
+    command: [/bin/sh -c "/Scripts/cluster/post.up"]
     depends_on: [hc]
 
 volumes:

@@ -7,4 +7,5 @@ echo "bootstrap server container ip address: $ipaddr"
 
 echo $ipaddr > /chain.seeded/bs.ip
 
-dlv exec ./cmd/bs
+#dlv exec ./cmd/bs
+bs &
