@@ -22,8 +22,8 @@ services:
     volumes:
       - seed:/chain.seeded
       - ./Scripts:/Scripts
-    depends_on: [service.chain]
     command: /bin/sh -c /Scripts/cluster/bs.start
+    privileged: True
   hc:
     build:
       context: .
