@@ -1,7 +1,0 @@
-FROM metacurrency/holochain
-
-ADD . /home/user/chain.testing
-WORKDIR /home/user/chain.testing
-
-expose 3141
-

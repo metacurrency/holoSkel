@@ -1,4 +1,0 @@
-#run docker-compose
-#build hc containers
-#submit host names of hc containers
-#run scripts against host names when all have entered

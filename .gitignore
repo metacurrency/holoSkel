@@ -1,1 +1,3 @@
-Scripts/tests/*.output
+/runtime/
+/logs.holochain/
+__tmp__*

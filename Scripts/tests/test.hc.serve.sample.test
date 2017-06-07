@@ -1,4 +1,0 @@
-docker run  -e LOCAL_USER_ID=`id -u $USER` -it $1 /bin/sh -c ./Scripts/tests/test.hc.serve.sample.test.inContainer | tee test.hc.serve.sample.test.output
-grep -q "Starting with UID : `id -u $USER`" ./test.hc.serve.sample.test.output || exit 1
-rm ./test.hc.serve.sample.test.output
-echo "passed test served hc as as user with matching user id"

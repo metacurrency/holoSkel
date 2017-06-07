@@ -1,6 +1,6 @@
 // Get list of posts in a Space
 function listMessages(room) {
-    var messages = getlink(room, "message",{Load:true});
+    var messages = getLink(room, "message",{Load:true});
   if( messages instanceof Error ) {
     return []
   } else {
@@ -36,7 +36,7 @@ function modMessage(x, old_message) {
 
 function isAllowed(author) {
     debug("Checking if "+author+" is a registered user...")
-    var registered_users = getlink(App.DNA.Hash, "registered_users",{Load:true});
+    var registered_users = getLink(App.DNA.Hash, "registered_users",{Load:true});
     debug("Registered users are: "+JSON.stringify(registered_users));
     if( registered_users instanceof Error ) return false;
     registered_users = registered_users.Links
@@ -50,7 +50,7 @@ function isAllowed(author) {
 
 function isValidRoom(room) {
     debug("Checking if "+room+" is a valid...")
-    var rooms = getlink(App.DNA.Hash, "room",{Load:true});
+    var rooms = getLink(App.DNA.Hash, "room",{Load:true});
     debug("Rooms: " + JSON.stringify(rooms))
   if( rooms instanceof Error ){
       return false
@@ -68,10 +68,10 @@ function genesis() {
 }
 
 
-function validatePut(entry_type,entry,header,sources) {
+function validatePut(entry_type,entry,header,pkg,sources) {
     return validate(entry_type,entry,header,sources);
 }
-function validateCommit(entry_type,entry,header,sources) {
+function validateCommit(entry_type,entry,header,pkg,sources) {
     if (entry_type == "my_messages") {
         //TODO proper source validation here...
         return true;
@@ -92,6 +92,12 @@ function validate(entry_type,entry,header,sources) {
     }
 }
 
-function validateLink(linkingEntryType,baseHash,linkHash,tag,sources){
+function validateLink(linkingEntryType,baseHash,linkHash,tag,pkg,sources){
     return true;
 }
+function validateMod(entry_type,hash,newHash,pkg,sources) {return true;}
+function validateDel(entry_type,hash,pkg,sources) {return true;}
+function validatePutPkg(entry_type) {return null}
+function validateModPkg(entry_type) { return null}
+function validateDelPkg(entry_type) { return null}
+function validateLinkPkg(entry_type) { return null}

@@ -5,7 +5,8 @@
         "FnName":"register",
         "Input":"{\"username\":\"person1\", \"firstName\":\"Joe\", \"lastName\":\"Person1\", \"email\":\"joe@example.com\"}",
         "Output":"\"%h1%\"",
-        "Err":""
+        "Err":"",
+        "Time": 1000
     },
     {
         "Convey":"create a room for the test",
@@ -13,7 +14,8 @@
         "FnName":"newRoom",
         "Input":"{\"name\":\"general\", \"purpose\":\"everything goes in here\"}",
         "Output":"\"%h1%\"",
-        "Err":""
+        "Err":"",
+        "Time": 3000
     },
     {
         "Convey":"send the first message",
@@ -21,6 +23,7 @@
         "FnName":"newMessage",
         "Input":"{\"content\":\"bla\", \"room\":\"%r1%\"}",
         "Output":"\"%h1%\"",
-        "Err":""
+        "Err":"",
+        "Time": 5000
     }
 ]

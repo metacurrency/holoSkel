@@ -5,7 +5,8 @@
         "FnName":"register",
         "Input":"{\"username\":\"person2\", \"firstName\":\"Jane\", \"lastName\":\"Person2\", \"email\":\"jane@example.com\"}",
         "Output":"\"%h1%\"",
-        "Err":""
+        "Err":"",
+        "Time": 2000
     },
     {
         "Convey":"room created by person 1 should be visible at 50ms",
@@ -14,7 +15,7 @@
         "Input":"",
         "Regexp":"^\\[\\{\"id\":\"(.*)\",\"name\":\"general\",\"purpose\":\"everything goes in here\"\\}\\]$",
         "Err":"",
-        "Time":2900
+        "Time":4000
     },
     {
         "Convey":"message created by person 1 should be visible at 50ms",
@@ -23,6 +24,6 @@
         "Input":"\"%m1.1%\"",
         "Regexp":"^\\[\\{\"content\":\"bla\",\"id\":\"(.*)\",\"room\":\".*\",\"timestamp\":\"[^\"]*\"\\}\\]$",
         "Err":"",
-        "Time":2905
+        "Time":6000
     }
 ]

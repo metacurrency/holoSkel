@@ -1,6 +1,6 @@
 {
     "Version": 0,
-    "Id": "00000000-0000-0000-0000-000000000000",
+    "ID": "00000000-0000-0000-0000-000000000000",
     "Name": "chat",
     "Properties": {
         "name": "My Chat",
@@ -9,7 +9,9 @@
         "initial_admin": "chuck@norris.com"
     },
     "PropertiesSchema": "properties_schema.json",
-    "HashType": "sha2-256",
+    "DHTConfig": {
+        "HashType": "sha2-256"
+    },
     "BasedOn": {
         "H": null
     },
